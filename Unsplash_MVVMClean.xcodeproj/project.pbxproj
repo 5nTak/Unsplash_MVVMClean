@@ -23,6 +23,9 @@
 		45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F602A16013E004C07DD /* NetworkProvider.swift */; };
 		45729F632A1601E9004C07DD /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F622A1601E9004C07DD /* Cancellable.swift */; };
 		45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F642A16023F004C07DD /* DefaultNetworkProvider.swift */; };
+		45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F672A160F41004C07DD /* PhotoRepository.swift */; };
+		45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F692A160FCE004C07DD /* SearchRepository.swift */; };
+		45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F6B2A1611EE004C07DD /* CategoryRepository.swift */; };
 		45729F6E2A161325004C07DD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F6D2A161325004C07DD /* Category.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		45729F602A16013E004C07DD /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		45729F622A1601E9004C07DD /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		45729F642A16023F004C07DD /* DefaultNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkProvider.swift; sourceTree = "<group>"; };
+		45729F672A160F41004C07DD /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		45729F692A160FCE004C07DD /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		45729F6B2A1611EE004C07DD /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		45729F6D2A161325004C07DD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				45729F4B2A15F5C6004C07DD /* Model */,
+				45729F662A160E96004C07DD /* RepositoryInterface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -154,6 +161,16 @@
 				45729F642A16023F004C07DD /* DefaultNetworkProvider.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		45729F662A160E96004C07DD /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				45729F672A160F41004C07DD /* PhotoRepository.swift */,
+				45729F6B2A1611EE004C07DD /* CategoryRepository.swift */,
+				45729F692A160FCE004C07DD /* SearchRepository.swift */,
+			);
+			path = RepositoryInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,14 +244,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				45729F4D2A15F5D3004C07DD /* Photo.swift in Sources */,
+				45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */,
 				45729F632A1601E9004C07DD /* Cancellable.swift in Sources */,
 				45729F5B2A15FF4D004C07DD /* Endpoint.swift in Sources */,
 				45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */,
 				45729F6E2A161325004C07DD /* Category.swift in Sources */,
 				45729F1F2A135675004C07DD /* ViewController.swift in Sources */,
 				45729F1B2A135675004C07DD /* AppDelegate.swift in Sources */,
+				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
 				45729F542A15FACE004C07DD /* Search.swift in Sources */,
 				45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */,
+				45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */,
 				45729F582A15FB16004C07DD /* User.swift in Sources */,
 				45729F1D2A135675004C07DD /* SceneDelegate.swift in Sources */,
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
