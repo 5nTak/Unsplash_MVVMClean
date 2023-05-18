@@ -12,11 +12,11 @@ struct Photo {
     let urls: ImageURLStyle
     let color: String
     let links: Links
-}
-
-struct Links {
-    let own: String
-    let html: String
-    let download: String
-    let downloadLocation: String
+    
+    struct Links {
+        let own: String
+        let html: String
+        let download: String
+        let downloadLocation: String
+    }
 }
