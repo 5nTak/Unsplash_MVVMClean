@@ -7,11 +7,27 @@
 
 import Foundation
 
-extension SearchObjectResponseDTO {
-    func toDomain() -> SearchObject<T> {
+extension SearchPhotoResponseDTO {
+    func toDomain() -> SearchObject<Photo> {
         return SearchObject(total: self.total,
                             totalPages: self.totalPages,
-                            results: self.results)
+                            results: self.results.compactMap { $0.toPhoto()} )
+    }
+}
+
+extension SearchCollectionResponseDTO {
+    func toDomain() -> SearchObject<Collection> {
+        return SearchObject(total: self.total,
+                            totalPages: self.totalPages,
+                            results: self.results.compactMap { $0.toCollection() })
+    }
+}
+
+extension SearchUserResponseDTO {
+    func toDomain() -> SearchObject<User> {
+        return SearchObject(total: self.total,
+                            totalPages: self.totalPages,
+                            results: self.results.compactMap { $0.toUser() })
     }
 }
 
@@ -38,6 +54,40 @@ extension ImageURLStyleResponse {
                              regular: self.regular,
                              small: self.small,
                              thumb: self.thumb)
+    }
+}
+
+extension CollectionResponse {
+    func toPreviewPhoto(_ previewPhotoResponse: PreviewPhotosResponse) -> Collection.PreviewPhoto {
+        return Collection.PreviewPhoto(id: previewPhotoResponse.id, urls: previewPhotoResponse.urls.toImageURLStyle())
+    }
+    
+    func toPreviewPhotos() -> [Collection.PreviewPhoto] {
+        return self.previewPhotos.compactMap { toPreviewPhoto($0) }
+    }
+    
+    func toCollection() -> Collection? {
+        return Collection(id: self.id,
+                          title: self.title,
+                          description: self.description,
+                          totalPhotos: self.totalPhotos,
+                          previewPhotos: self.toPreviewPhotos(),
+                          user: self.user.toUser())
+    }
+}
+
+extension UserResponse {
+    func toProfileImage() -> User.ProfileImage {
+        return User.ProfileImage(small: self.profileImage.small,
+                                 medium: self.profileImage.medium,
+                                 large: self.profileImage.large)
+    }
+    
+    func toUser() -> User {
+        return User(id: self.id,
+                    name: self.name,
+                    username: self.username,
+                    profileImage: self.toProfileImage())
     }
 }
 
