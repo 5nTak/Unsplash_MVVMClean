@@ -27,6 +27,7 @@
 		45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F692A160FCE004C07DD /* SearchRepository.swift */; };
 		45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F6B2A1611EE004C07DD /* CategoryRepository.swift */; };
 		45729F6E2A161325004C07DD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F6D2A161325004C07DD /* Category.swift */; };
+		45729F832A18988D004C07DD /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F822A18988D004C07DD /* SearchType.swift */; };
 		45729F792A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F782A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift */; };
 		45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F7A2A162239004C07DD /* UnsplashResponseDTO.swift */; };
 		45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */; };
@@ -137,6 +138,7 @@
 				45729F6D2A161325004C07DD /* Category.swift */,
 				45729F512A15F9A5004C07DD /* ImageURLStyle.swift */,
 				45729F532A15FACE004C07DD /* Search.swift */,
+				45729F822A18988D004C07DD /* SearchType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +281,7 @@
 				45729F4D2A15F5D3004C07DD /* Photo.swift in Sources */,
 				45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */,
 				45729F632A1601E9004C07DD /* Cancellable.swift in Sources */,
+				45729F832A18988D004C07DD /* SearchType.swift in Sources */,
 				45729F5B2A15FF4D004C07DD /* Endpoint.swift in Sources */,
 				45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */,
 				45729F6E2A161325004C07DD /* Category.swift in Sources */,
