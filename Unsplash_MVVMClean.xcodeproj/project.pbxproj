@@ -29,6 +29,7 @@
 		45729F6E2A161325004C07DD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F6D2A161325004C07DD /* Category.swift */; };
 		45729F792A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F782A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift */; };
 		45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F7A2A162239004C07DD /* UnsplashResponseDTO.swift */; };
+		45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		45729F6D2A161325004C07DD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		45729F782A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnsplashResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 		45729F7A2A162239004C07DD /* UnsplashResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponseDTO.swift; sourceTree = "<group>"; };
+		45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahAPIEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		45729F762A1621B1004C07DD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				45729F7C2A1894D0004C07DD /* Endpoint */,
 				45729F772A1621C1004C07DD /* Response */,
 			);
 			path = Data;
@@ -185,6 +188,22 @@
 				45729F7A2A162239004C07DD /* UnsplashResponseDTO.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		45729F7C2A1894D0004C07DD /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				45729F7F2A18953A004C07DD /* Protocol */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		45729F7F2A18953A004C07DD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +287,7 @@
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
 				45729F542A15FACE004C07DD /* Search.swift in Sources */,
 				45729F792A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift in Sources */,
+				45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */,
 				45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */,
 				45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */,
 				45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */,
