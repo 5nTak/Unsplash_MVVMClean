@@ -8,10 +8,10 @@
 import Foundation
 
 protocol SearchRepository {
-    func fetchSearchResult(
+    func fetchSearchResult<T: Identifiable>(
         searchText: String,
         searchType: String,
         pageNum: Int,
-        completion: @escaping (Result<SearchObject<[Photo]>, Error>) -> Void
+        completion: @escaping (Result<SearchObject<T>, Error>) -> Void
     ) -> Cancellable?
 }
