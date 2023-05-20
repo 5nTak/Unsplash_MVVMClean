@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchRepository {
-    func fetchSearchResult<T: Identifiable>(
+    func fetchSearchResult<T>(
         searchText: String,
         searchType: String,
         pageNum: Int,

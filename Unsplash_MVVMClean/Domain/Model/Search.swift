@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct SearchObject<T: Identifiable> {
+protocol Searchable { }
+
+struct SearchObject<T: Searchable> {
     let total: Int
     let totalPages: Int
     let results: [T]

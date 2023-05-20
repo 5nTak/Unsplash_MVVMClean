@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Collection: Identifiable {
+struct Collection: Searchable {
     let id: String
     let title: String
     let description: String?
     let totalPhotos: Int
-    let previewPhotos: [PreviewPhotos]
+    let previewPhotos: [PreviewPhoto]
     let user: User
     
-    struct PreviewPhotos {
-        let identifier: String
+    struct PreviewPhoto {
+        let id: String
         let urls: ImageURLStyle
     }
 }
