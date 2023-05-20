@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchObject<T> {
+struct SearchObject<T: Identifiable> {
     let total: Int
     let totalPages: Int
     let results: [T]
