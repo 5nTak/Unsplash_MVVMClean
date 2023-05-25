@@ -32,6 +32,7 @@
 		45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */; };
 		45729F832A18988D004C07DD /* (null) in Sources */ = {isa = PBXBuildFile; };
 		45729F872A18C375004C07DD /* PhotoListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F862A18C375004C07DD /* PhotoListEndpoint.swift */; };
+		45729F952A1F4568004C07DD /* CategoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F942A1F4568004C07DD /* CategoryEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		45729F7A2A162239004C07DD /* UnsplashResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponseDTO.swift; sourceTree = "<group>"; };
 		45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplahAPIEndpoint.swift; sourceTree = "<group>"; };
 		45729F862A18C375004C07DD /* PhotoListEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListEndpoint.swift; sourceTree = "<group>"; };
+		45729F942A1F4568004C07DD /* CategoryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				45729F862A18C375004C07DD /* PhotoListEndpoint.swift */,
+				45729F942A1F4568004C07DD /* CategoryEndpoint.swift */,
 				45729F7F2A18953A004C07DD /* Protocol */,
 			);
 			path = Endpoint;
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45729F952A1F4568004C07DD /* CategoryEndpoint.swift in Sources */,
 				45729F4D2A15F5D3004C07DD /* Photo.swift in Sources */,
 				45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */,
 				45729F632A1601E9004C07DD /* Cancellable.swift in Sources */,
