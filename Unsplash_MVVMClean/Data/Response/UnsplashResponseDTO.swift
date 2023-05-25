@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - SearchResponseDTO
 struct SearchPhotoResponseDTO: Decodable {
     let total: Int
     let totalPages: Int
@@ -40,7 +41,8 @@ struct SearchUserResponseDTO: Decodable {
     }
 }
 
-struct PhotoResponse: Decodable {
+// MARK: - Response
+struct PhotoResponse: Decodable {    
     let id: String
     let urls: ImageURLStyleResponse
     let color: String

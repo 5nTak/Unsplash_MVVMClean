@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - SearchResponseDTO
 extension SearchPhotoResponseDTO {
     func toDomain() -> SearchObject<Photo> {
         return SearchObject(total: self.total,
@@ -31,6 +32,7 @@ extension SearchUserResponseDTO {
     }
 }
 
+// MARK: - Response
 extension PhotoResponse {
     func toLink() -> Photo.Links {
         return Photo.Links(own: self.links.own,
