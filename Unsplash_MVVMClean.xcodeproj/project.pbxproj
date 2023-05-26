@@ -35,6 +35,7 @@
 		45729F932A1F44DF004C07DD /* SearchPhotoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F922A1F44DF004C07DD /* SearchPhotoEndpoint.swift */; };
 		45729F952A1F4568004C07DD /* CategoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F942A1F4568004C07DD /* CategoryEndpoint.swift */; };
 		45729F972A1F458A004C07DD /* SearchUserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F962A1F458A004C07DD /* SearchUserEndpoint.swift */; };
+		45729F9A2A1F4ABC004C07DD /* DefaultPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		45729F922A1F44DF004C07DD /* SearchPhotoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoEndpoint.swift; sourceTree = "<group>"; };
 		45729F942A1F4568004C07DD /* CategoryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpoint.swift; sourceTree = "<group>"; };
 		45729F962A1F458A004C07DD /* SearchUserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserEndpoint.swift; sourceTree = "<group>"; };
+		45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +185,8 @@
 		45729F762A1621B1004C07DD /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				45729F7C2A1894D0004C07DD /* Endpoint */,
-				45729F772A1621C1004C07DD /* Response */,
+				45729F9F2A1F4DDB004C07DD /* Network */,
+				45729F982A1F4A97004C07DD /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -217,6 +219,23 @@
 				45729F7D2A1894E9004C07DD /* UnsplahAPIEndpoint.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		45729F982A1F4A97004C07DD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		45729F9F2A1F4DDB004C07DD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				45729F7C2A1894D0004C07DD /* Endpoint */,
+				45729F772A1621C1004C07DD /* Response */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +333,7 @@
 				45729F5F2A160118004C07DD /* NetworkError.swift in Sources */,
 				45729F932A1F44DF004C07DD /* SearchPhotoEndpoint.swift in Sources */,
 				45729F522A15F9A5004C07DD /* ImageURLStyle.swift in Sources */,
+				45729F9A2A1F4ABC004C07DD /* DefaultPhotoRepository.swift in Sources */,
 				45729F872A18C375004C07DD /* PhotoListEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
