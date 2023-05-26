@@ -41,7 +41,7 @@ extension PhotoResponse {
                            downloadLocation: self.links.downloadLocation)
     }
     
-    func toPhoto() -> Photo? {
+    func toPhoto() -> Photo {
         return Photo(id: self.id,
                      urls: self.urls.toImageURLStyle(),
                      color: self.color,
