@@ -36,6 +36,7 @@
 		45729F952A1F4568004C07DD /* CategoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F942A1F4568004C07DD /* CategoryEndpoint.swift */; };
 		45729F972A1F458A004C07DD /* SearchUserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F962A1F458A004C07DD /* SearchUserEndpoint.swift */; };
 		45729F9A2A1F4ABC004C07DD /* DefaultPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */; };
+		45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		45729F942A1F4568004C07DD /* CategoryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpoint.swift; sourceTree = "<group>"; };
 		45729F962A1F458A004C07DD /* SearchUserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserEndpoint.swift; sourceTree = "<group>"; };
 		45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotoRepository.swift; sourceTree = "<group>"; };
+		45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCategoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */,
+				45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				45729F972A1F458A004C07DD /* SearchUserEndpoint.swift in Sources */,
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
 				45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */,
+				45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */,
 				45729F5F2A160118004C07DD /* NetworkError.swift in Sources */,
 				45729F932A1F44DF004C07DD /* SearchPhotoEndpoint.swift in Sources */,
 				45729F522A15F9A5004C07DD /* ImageURLStyle.swift in Sources */,
