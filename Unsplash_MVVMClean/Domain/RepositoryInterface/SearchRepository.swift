@@ -8,10 +8,24 @@
 import Foundation
 
 protocol SearchRepository {
-    func fetchSearchResult<T>(
+    func fetchSearchPhotosResult(
         searchText: String,
         searchType: String,
         pageNum: Int,
-        completion: @escaping (Result<SearchObject<T>, Error>) -> Void
-    ) -> Cancellable?
+        completion: @escaping (Result<SearchObject<Photo>, Error>) -> Void
+    ) -> URLSessionTask?
+    
+    func fetchSearchCollectionsResult(
+        searchText: String,
+        searchType: String,
+        pageNum: Int,
+        completion: @escaping (Result<SearchObject<Collection>, Error>) -> Void
+    ) -> URLSessionTask?
+    
+    func fetchSearchUsersResult(
+        searchText: String,
+        searchType: String,
+        pageNum: Int,
+        completion: @escaping (Result<SearchObject<User>, Error>) -> Void
+    ) -> URLSessionTask?
 }
