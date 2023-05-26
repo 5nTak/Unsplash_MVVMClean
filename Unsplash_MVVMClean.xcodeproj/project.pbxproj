@@ -40,6 +40,7 @@
 		45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F9D2A1F4C14004C07DD /* DefaultSearchRepository.swift */; };
 		45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA12A20D32B004C07DD /* PhotoUseCase.swift */; };
 		45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA32A20D43C004C07DD /* CategoryUseCase.swift */; };
+		45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA52A20D499004C07DD /* SearchUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		45729F9D2A1F4C14004C07DD /* DefaultSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSearchRepository.swift; sourceTree = "<group>"; };
 		45729FA12A20D32B004C07DD /* PhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUseCase.swift; sourceTree = "<group>"; };
 		45729FA32A20D43C004C07DD /* CategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUseCase.swift; sourceTree = "<group>"; };
+		45729FA52A20D499004C07DD /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			children = (
 				45729FA12A20D32B004C07DD /* PhotoUseCase.swift */,
 				45729FA32A20D43C004C07DD /* CategoryUseCase.swift */,
+				45729FA52A20D499004C07DD /* SearchUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				45729F6E2A161325004C07DD /* Category.swift in Sources */,
 				45729F1F2A135675004C07DD /* ViewController.swift in Sources */,
 				45729F1B2A135675004C07DD /* AppDelegate.swift in Sources */,
+				45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */,
 				45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */,
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
 				45729F542A15FACE004C07DD /* Search.swift in Sources */,
