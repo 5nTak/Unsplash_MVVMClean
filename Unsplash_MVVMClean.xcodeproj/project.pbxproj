@@ -39,6 +39,7 @@
 		45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */; };
 		45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F9D2A1F4C14004C07DD /* DefaultSearchRepository.swift */; };
 		45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA12A20D32B004C07DD /* PhotoUseCase.swift */; };
+		45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA32A20D43C004C07DD /* CategoryUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCategoryRepository.swift; sourceTree = "<group>"; };
 		45729F9D2A1F4C14004C07DD /* DefaultSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSearchRepository.swift; sourceTree = "<group>"; };
 		45729FA12A20D32B004C07DD /* PhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUseCase.swift; sourceTree = "<group>"; };
+		45729FA32A20D43C004C07DD /* CategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				45729FA12A20D32B004C07DD /* PhotoUseCase.swift */,
+				45729FA32A20D43C004C07DD /* CategoryUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				45729F582A15FB16004C07DD /* User.swift in Sources */,
 				45729F1D2A135675004C07DD /* SceneDelegate.swift in Sources */,
 				45729F972A1F458A004C07DD /* SearchUserEndpoint.swift in Sources */,
+				45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */,
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
 				45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */,
 				45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */,
