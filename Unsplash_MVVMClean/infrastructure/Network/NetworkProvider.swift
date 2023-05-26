@@ -12,5 +12,5 @@ protocol NetworkProvider {
     func request<T: APIEndpoint>(
         _ request: T,
         completion: @escaping (Result<T.APIResponse, NetworkError>) -> Void
-    ) -> Cancellable?
+    ) -> URLSessionTask?
 }

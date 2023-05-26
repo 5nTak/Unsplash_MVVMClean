@@ -11,5 +11,5 @@ protocol PhotoRepository {
     func fetchPhotos(
         pageNum: Int,
         completion: @escaping (Result<[Photo], Error>) -> Void
-    ) -> Cancellable?
+    ) -> URLSessionTask?
 }

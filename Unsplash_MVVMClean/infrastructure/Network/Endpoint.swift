@@ -14,12 +14,14 @@ protocol APIEndpoint {
     var baseURL: URL? { get }
     var path: String { get }
     var url: URL? { get }
-    var headers: [String: String]? { get }
     var queries: [String: String] { get }
-    var body: Data? { get }
 }
 
 extension APIEndpoint {
+    var method: HTTPMethod {
+        return .get
+    }
+    
     var url: URL? {
         guard let url = self.baseURL?.appendingPathComponent(self.path) else {
             return nil
@@ -40,12 +42,6 @@ extension APIEndpoint {
         }
         var request = URLRequest(url: url)
         request.httpMethod = self.method.rawValue
-
-        if let headers = self.headers {
-            headers.forEach { key, value in
-                request.addValue(value, forHTTPHeaderField: key)
-            }
-        }
 
         return request
     }

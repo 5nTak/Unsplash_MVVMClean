@@ -10,5 +10,5 @@ import Foundation
 protocol CategoryRepository {
     func fetchCategories(
         completion: @escaping (Result<[Category], Error>) -> Void
-    ) -> Cancellable?
+    ) -> URLSessionTask?
 }

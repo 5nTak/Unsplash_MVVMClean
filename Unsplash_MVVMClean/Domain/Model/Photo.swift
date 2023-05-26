@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo: Identifiable {
+struct Photo: Searchable {
     let id: String
     let urls: ImageURLStyle
     let color: String

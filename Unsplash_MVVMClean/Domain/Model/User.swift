@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Identifiable {
+struct User: Searchable {
     let id: String
     let name: String
     let username: String
