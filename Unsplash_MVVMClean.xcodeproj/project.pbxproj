@@ -38,6 +38,7 @@
 		45729F9A2A1F4ABC004C07DD /* DefaultPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */; };
 		45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */; };
 		45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F9D2A1F4C14004C07DD /* DefaultSearchRepository.swift */; };
+		45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA12A20D32B004C07DD /* PhotoUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		45729F992A1F4ABC004C07DD /* DefaultPhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotoRepository.swift; sourceTree = "<group>"; };
 		45729F9B2A1F4B8D004C07DD /* DefaultCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCategoryRepository.swift; sourceTree = "<group>"; };
 		45729F9D2A1F4C14004C07DD /* DefaultSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSearchRepository.swift; sourceTree = "<group>"; };
+		45729FA12A20D32B004C07DD /* PhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				45729F4B2A15F5C6004C07DD /* Model */,
 				45729F662A160E96004C07DD /* RepositoryInterface */,
+				45729FA02A20D316004C07DD /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -244,6 +247,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		45729FA02A20D316004C07DD /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				45729FA12A20D32B004C07DD /* PhotoUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,6 +342,7 @@
 				45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */,
 				45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */,
 				45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */,
+				45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */,
 				45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */,
 				45729F582A15FB16004C07DD /* User.swift in Sources */,
 				45729F1D2A135675004C07DD /* SceneDelegate.swift in Sources */,
