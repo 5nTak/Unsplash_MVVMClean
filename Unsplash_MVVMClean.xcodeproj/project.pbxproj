@@ -21,7 +21,6 @@
 		45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F5C2A15FFF2004C07DD /* HTTPMethod.swift */; };
 		45729F5F2A160118004C07DD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F5E2A160118004C07DD /* NetworkError.swift */; };
 		45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F602A16013E004C07DD /* NetworkProvider.swift */; };
-		45729F632A1601E9004C07DD /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F622A1601E9004C07DD /* Cancellable.swift */; };
 		45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F642A16023F004C07DD /* DefaultNetworkProvider.swift */; };
 		45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F672A160F41004C07DD /* PhotoRepository.swift */; };
 		45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F692A160FCE004C07DD /* SearchRepository.swift */; };
@@ -55,7 +54,6 @@
 		45729F5C2A15FFF2004C07DD /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		45729F5E2A160118004C07DD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		45729F602A16013E004C07DD /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		45729F622A1601E9004C07DD /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		45729F642A16023F004C07DD /* DefaultNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkProvider.swift; sourceTree = "<group>"; };
 		45729F672A160F41004C07DD /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
 		45729F692A160FCE004C07DD /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			children = (
 				45729F5C2A15FFF2004C07DD /* HTTPMethod.swift */,
 				45729F5A2A15FF4D004C07DD /* Endpoint.swift */,
-				45729F622A1601E9004C07DD /* Cancellable.swift */,
 				45729F5E2A160118004C07DD /* NetworkError.swift */,
 				45729F602A16013E004C07DD /* NetworkProvider.swift */,
 				45729F642A16023F004C07DD /* DefaultNetworkProvider.swift */,
@@ -295,7 +292,6 @@
 				45729F952A1F4568004C07DD /* CategoryEndpoint.swift in Sources */,
 				45729F4D2A15F5D3004C07DD /* Photo.swift in Sources */,
 				45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */,
-				45729F632A1601E9004C07DD /* Cancellable.swift in Sources */,
 				45729F832A18988D004C07DD /* (null) in Sources */,
 				45729F912A1F3E91004C07DD /* SearchCollectionEndpoint.swift in Sources */,
 				45729F5B2A15FF4D004C07DD /* Endpoint.swift in Sources */,
