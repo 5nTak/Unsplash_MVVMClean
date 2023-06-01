@@ -19,7 +19,7 @@ final class DefaultPhotoRepository: PhotoRepository {
         return self.networkProvider.request(request) { result in
             switch result {
             case .success(let photoResponse):
-                completion(.success([photoResponse.toPhoto()]))
+                completion(.success(photoResponse.compactMap { $0.toPhoto() }))
             case .failure(let error):
                 completion(.failure(error))
             }

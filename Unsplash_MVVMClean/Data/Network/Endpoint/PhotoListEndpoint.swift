@@ -8,7 +8,7 @@
 import Foundation
 
 struct PhotoListEndpoint: UnsplashAPIEndpoint {
-    typealias APIResponse = PhotoResponse
+    typealias APIResponse = [PhotoResponse] 
     
     var pageNum: Int
     var path: String = "/photos"

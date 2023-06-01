@@ -19,7 +19,7 @@ final class DefaultCategoryRepository: CategoryRepository {
         return self.networkProvider.request(request) { result in
             switch result {
             case .success(let categoryResponse):
-                completion(.success([categoryResponse.toCategory()]))
+                completion(.success(categoryResponse.compactMap { $0.toCategory() }))
             case .failure(let error):
                 completion(.failure(error))
             }

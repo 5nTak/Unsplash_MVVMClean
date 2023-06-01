@@ -8,7 +8,7 @@
 import Foundation
 
 struct CategoryEndpoint: UnsplashAPIEndpoint {
-    typealias APIResponse = CategoryResponse
+    typealias APIResponse = [CategoryResponse]
     
     var path: String = "/topics"
     var queries: [String : String] {
