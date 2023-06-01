@@ -10,7 +10,7 @@ import Foundation
 final class PhotoUseCase {
     private let photoRepository: PhotoRepository
     
-    init(photoRepository: PhotoRepository) {
+    init(photoRepository: PhotoRepository = DefaultPhotoRepository()) {
         self.photoRepository = photoRepository
     }
     

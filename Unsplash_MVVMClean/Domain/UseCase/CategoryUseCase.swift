@@ -10,7 +10,7 @@ import Foundation
 final class CategoryUseCase {
     private let categoryRepository: CategoryRepository
     
-    init(categoryRepository: CategoryRepository) {
+    init(categoryRepository: CategoryRepository = DefaultCategoryRepository()) {
         self.categoryRepository = categoryRepository
     }
     
