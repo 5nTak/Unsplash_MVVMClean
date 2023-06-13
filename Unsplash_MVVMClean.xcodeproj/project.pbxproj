@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452E8B932A3080D200B52154 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B922A3080D200B52154 /* ImageCache.swift */; };
 		452E8B9E2A30829700B52154 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 452E8B9D2A30829700B52154 /* SnapKit */; };
 		452E8BA32A30895700B52154 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8BA22A30895700B52154 /* String+Extension.swift */; };
 		452E8BA52A30898700B52154 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8BA42A30898700B52154 /* UIViewController+Extension.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452E8B922A3080D200B52154 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		452E8BA22A30895700B52154 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		452E8BA42A30898700B52154 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		452E8BA72A38764C00B52154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		452E8B912A3080BD00B52154 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				452E8B922A3080D200B52154 /* ImageCache.swift */,
 				452E8B9F2A30893200B52154 /* Extension */,
 			);
 			path = Utils;
@@ -378,6 +381,7 @@
 				45729F6E2A161325004C07DD /* Category.swift in Sources */,
 				45729F1F2A135675004C07DD /* MainTabBarController.swift in Sources */,
 				45729F1B2A135675004C07DD /* AppDelegate.swift in Sources */,
+				452E8B932A3080D200B52154 /* ImageCache.swift in Sources */,
 				45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */,
 				45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */,
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
