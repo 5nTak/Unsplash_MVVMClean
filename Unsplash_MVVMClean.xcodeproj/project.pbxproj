@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */; };
+		452E8B8B2A287DE100B52154 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B8A2A287DE100B52154 /* PhotoListCollectionViewCell.swift */; };
 		452E8B902A2889E100B52154 /* PhotoListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */; };
 		452E8B932A3080D200B52154 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B922A3080D200B52154 /* ImageCache.swift */; };
 		452E8B952A3080FA00B52154 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B942A3080FA00B52154 /* DownloadableImageView.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		452E8B8A2A287DE100B52154 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		452E8B922A3080D200B52154 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		452E8B942A3080FA00B52154 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
@@ -114,8 +116,17 @@
 			children = (
 				452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */,
 				452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */,
+				452E8B8E2A28891F00B52154 /* Cell */,
 			);
 			path = PhotoListView;
+			sourceTree = "<group>";
+		};
+		452E8B8E2A28891F00B52154 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				452E8B8A2A287DE100B52154 /* PhotoListCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		452E8B912A3080BD00B52154 /* Utils */ = {
@@ -418,6 +429,7 @@
 				45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */,
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
 				452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */,
+				452E8B8B2A287DE100B52154 /* PhotoListCollectionViewCell.swift in Sources */,
 				45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */,
 				45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */,
 				45729F5F2A160118004C07DD /* NetworkError.swift in Sources */,
