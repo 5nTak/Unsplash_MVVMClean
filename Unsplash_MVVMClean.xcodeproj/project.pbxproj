@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */; };
 		452E8B932A3080D200B52154 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B922A3080D200B52154 /* ImageCache.swift */; };
 		452E8B952A3080FA00B52154 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B942A3080FA00B52154 /* DownloadableImageView.swift */; };
 		452E8B9E2A30829700B52154 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 452E8B9D2A30829700B52154 /* SnapKit */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		452E8B922A3080D200B52154 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		452E8B942A3080FA00B52154 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
 		452E8BA22A30895700B52154 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452E8B852A25B9CF00B52154 /* PhotoListView */ = {
+			isa = PBXGroup;
+			children = (
+				452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */,
+			);
+			path = PhotoListView;
+			sourceTree = "<group>";
+		};
 		452E8B912A3080BD00B52154 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				45729F1E2A135675004C07DD /* MainTabBarController.swift */,
+				452E8B852A25B9CF00B52154 /* PhotoListView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 				45729F972A1F458A004C07DD /* SearchUserEndpoint.swift in Sources */,
 				45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */,
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
+				452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */,
 				45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */,
 				45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */,
 				45729F5F2A160118004C07DD /* NetworkError.swift in Sources */,
