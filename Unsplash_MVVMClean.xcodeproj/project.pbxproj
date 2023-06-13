@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */; };
+		452E8B902A2889E100B52154 /* PhotoListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */; };
 		452E8B932A3080D200B52154 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B922A3080D200B52154 /* ImageCache.swift */; };
 		452E8B952A3080FA00B52154 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B942A3080FA00B52154 /* DownloadableImageView.swift */; };
 		452E8B9E2A30829700B52154 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 452E8B9D2A30829700B52154 /* SnapKit */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		452E8B922A3080D200B52154 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		452E8B942A3080FA00B52154 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
 		452E8BA22A30895700B52154 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */,
+				452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */,
 			);
 			path = PhotoListView;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				45729F1F2A135675004C07DD /* MainTabBarController.swift in Sources */,
 				45729F1B2A135675004C07DD /* AppDelegate.swift in Sources */,
 				452E8B932A3080D200B52154 /* ImageCache.swift in Sources */,
+				452E8B902A2889E100B52154 /* PhotoListCollectionViewDataSource.swift in Sources */,
 				45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */,
 				45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */,
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
