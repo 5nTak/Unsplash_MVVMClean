@@ -10,7 +10,7 @@ import SnapKit
 
 final class PhotoListViewController: UIViewController {
     private var viewModel: PhotoListViewModel = PhotoListViewModel()
-    private var photoListViewDataSource: PhotoListCollectionViewDataSource = PhotoListCollectionViewDataSource()
+    private var photoListViewDataSource = PhotoListCollectionViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +42,9 @@ final class PhotoListViewController: UIViewController {
     }()
     
     @objc func refreshPhotos() {
-        viewModel.bindPhotos { [weak self] photos in
-            print(photos)
-        }
+        viewModel.photos = []
+        viewModel.showPhotos()
+        collectionView.refreshControl?.endRefreshing()
     }
     
     private func setupCollectionViewLayout() {

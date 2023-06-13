@@ -11,7 +11,6 @@ class PhotoListViewModel {
     var photos: [Photo] = [] {
         didSet {
             photosHandler?(photos)
-            print(photos)
         }
     }
     var pageNum: Int = 0
