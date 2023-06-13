@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Unsplash_MVVMClean
+
+  Created by Tak on 2023/06/07.
+  
+*/
+
+"image_load_fail" = "Unable to load image";
+"unsplash_share_title" = "UnSplash Share";
+"ok" = "OK";
+"error" = "Error";
+"error_network_message" = "
+There is a network problem.\nPlease try again later.";
+"error_json_parsing" = "Data conversion failed.\nPlease try again later.";
+"error_data" = "There is a data problem.\nPlease contact the person in charge.";
+"error_etc" = "An unknown error has occurred.\nPlease try again later.";
+
+"input_error_message" = "Please, Check your input Value.";
+"login" = "Log In";
+"find_password" = "Forgot your password?";
+"join" = "Don't have an account? Join";
+
+"login_result" = "Login result";
+"login_result_message" = "Login success.";
+
+"reset" = "Reset result";
+"reset_message" = "The reset password has been sent to your email address. Try logging in.";
+
+"join_title" = "By joining, you agree to the Terms and Privacy Policy.";
+"join_result" = "Join result";
+"join_success" = "Join success. welcome!";
