@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */; };
+		452E8B892A25BC1800B52154 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B882A25BC1800B52154 /* PhotoListViewController.swift */; };
 		452E8B8B2A287DE100B52154 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B8A2A287DE100B52154 /* PhotoListCollectionViewCell.swift */; };
 		452E8B902A2889E100B52154 /* PhotoListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */; };
 		452E8B932A3080D200B52154 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B922A3080D200B52154 /* ImageCache.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		452E8B882A25BC1800B52154 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		452E8B8A2A287DE100B52154 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		452E8B922A3080D200B52154 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */,
+				452E8B882A25BC1800B52154 /* PhotoListViewController.swift */,
 				452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */,
 				452E8B8E2A28891F00B52154 /* Cell */,
 			);
@@ -424,6 +427,7 @@
 				45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */,
 				45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */,
 				45729F582A15FB16004C07DD /* User.swift in Sources */,
+				452E8B892A25BC1800B52154 /* PhotoListViewController.swift in Sources */,
 				45729F1D2A135675004C07DD /* SceneDelegate.swift in Sources */,
 				45729F972A1F458A004C07DD /* SearchUserEndpoint.swift in Sources */,
 				45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */,
