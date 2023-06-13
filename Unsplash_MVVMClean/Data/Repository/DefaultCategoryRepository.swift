@@ -10,7 +10,7 @@ import Foundation
 final class DefaultCategoryRepository: CategoryRepository {
     let networkProvider: DefaultNetworkProvider
     
-    init(networkProvider: DefaultNetworkProvider) {
+    init(networkProvider: DefaultNetworkProvider = DefaultNetworkProvider()) {
         self.networkProvider = networkProvider
     }
     
