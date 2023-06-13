@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452E8B932A3080D200B52154 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B922A3080D200B52154 /* ImageCache.swift */; };
+		452E8B952A3080FA00B52154 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8B942A3080FA00B52154 /* DownloadableImageView.swift */; };
 		452E8B9E2A30829700B52154 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 452E8B9D2A30829700B52154 /* SnapKit */; };
 		452E8BA32A30895700B52154 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8BA22A30895700B52154 /* String+Extension.swift */; };
 		452E8BA52A30898700B52154 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8BA42A30898700B52154 /* UIViewController+Extension.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		452E8B922A3080D200B52154 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		452E8B942A3080FA00B52154 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
 		452E8BA22A30895700B52154 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		452E8BA42A30898700B52154 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		452E8BA72A38764C00B52154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				452E8B922A3080D200B52154 /* ImageCache.swift */,
+				452E8B942A3080FA00B52154 /* DownloadableImageView.swift */,
 				452E8B9F2A30893200B52154 /* Extension */,
 			);
 			path = Utils;
@@ -376,6 +379,7 @@
 				45729F832A18988D004C07DD /* (null) in Sources */,
 				45729F912A1F3E91004C07DD /* SearchCollectionEndpoint.swift in Sources */,
 				45729F5B2A15FF4D004C07DD /* Endpoint.swift in Sources */,
+				452E8B952A3080FA00B52154 /* DownloadableImageView.swift in Sources */,
 				45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */,
 				452E8BA52A30898700B52154 /* UIViewController+Extension.swift in Sources */,
 				45729F6E2A161325004C07DD /* Category.swift in Sources */,
