@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		452E8B9E2A30829700B52154 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 452E8B9D2A30829700B52154 /* SnapKit */; };
 		452E8BA32A30895700B52154 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8BA22A30895700B52154 /* String+Extension.swift */; };
+		452E8BA52A30898700B52154 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E8BA42A30898700B52154 /* UIViewController+Extension.swift */; };
 		452E8BA62A38764C00B52154 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 452E8BA82A38764C00B52154 /* Localizable.strings */; };
 		45729F1B2A135675004C07DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F1A2A135675004C07DD /* AppDelegate.swift */; };
 		45729F1D2A135675004C07DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729F1C2A135675004C07DD /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		452E8BA22A30895700B52154 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		452E8BA42A30898700B52154 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		452E8BA72A38764C00B52154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		452E8BA92A38767D00B52154 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		45729F172A135675004C07DD /* Unsplash_MVVMClean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash_MVVMClean.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				452E8BA22A30895700B52154 /* String+Extension.swift */,
+				452E8BA42A30898700B52154 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				45729F912A1F3E91004C07DD /* SearchCollectionEndpoint.swift in Sources */,
 				45729F5B2A15FF4D004C07DD /* Endpoint.swift in Sources */,
 				45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */,
+				452E8BA52A30898700B52154 /* UIViewController+Extension.swift in Sources */,
 				45729F6E2A161325004C07DD /* Category.swift in Sources */,
 				45729F1F2A135675004C07DD /* MainTabBarController.swift in Sources */,
 				45729F1B2A135675004C07DD /* AppDelegate.swift in Sources */,
