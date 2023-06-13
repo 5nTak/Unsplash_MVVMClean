@@ -12,6 +12,13 @@ struct Photo: Searchable {
     let urls: ImageURLStyle
     let color: String
     let links: Links
+    let width: Int
+    let height: Int
+    let user: User
+    
+    var imageRatio: CGFloat {
+        return CGFloat(height) / CGFloat(width)
+    }
     
     struct Links {
         let own: String

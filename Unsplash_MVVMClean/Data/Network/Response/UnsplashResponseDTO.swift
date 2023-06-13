@@ -47,6 +47,9 @@ struct PhotoResponse: Decodable {
     let urls: ImageURLStyleResponse
     let color: String
     let links: Links
+    let width: Int
+    let height: Int
+    let user: UserResponse
     
     struct Links: Decodable {
         let own: String
@@ -62,7 +65,7 @@ struct PhotoResponse: Decodable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id, urls, color, links
+        case id, urls, color, links, width, height, user
     }
 }
 

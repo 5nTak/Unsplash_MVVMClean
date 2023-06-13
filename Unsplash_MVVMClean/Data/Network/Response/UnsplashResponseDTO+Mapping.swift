@@ -45,7 +45,17 @@ extension PhotoResponse {
         return Photo(id: self.id,
                      urls: self.urls.toImageURLStyle(),
                      color: self.color,
-                     links: self.toLink())
+                     links: self.toLink(),
+                     width: self.width,
+                     height: self.height,
+                     user: self.toUser())
+    }
+    
+    func toUser() -> User {
+        return User(id: self.id,
+                    name: self.user.name,
+                    username: self.user.username,
+                    profileImage: self.user.toProfileImage())
     }
 }
 
