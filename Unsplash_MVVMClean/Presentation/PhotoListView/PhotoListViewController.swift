@@ -98,16 +98,13 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
 
 extension PhotoListViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        if viewModel.photos.count == 0 {
-            return
-        }
-
-        guard let row = indexPaths.first?.row else {
-            return
-        }
-
-        if row == viewModel.photos.count - 11 || row == viewModel.photos.count - 6 || row == viewModel.photos.count - 1 {
-            bind()
+        for indexPath in indexPaths {
+            if viewModel.photos.count == indexPath.row + 6 {
+                viewModel.pageNum += 1
+                viewModel.showPhotos()
+                bind()
+            }
+            collectionView.reloadData()
         }
     }
 }
