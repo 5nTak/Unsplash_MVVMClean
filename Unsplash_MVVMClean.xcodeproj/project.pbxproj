@@ -56,6 +56,7 @@
 		459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A02A3C150300489B48 /* UnderLineTextField.swift */; };
 		459785A52A3C15FF00489B48 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A42A3C15FF00489B48 /* JoinViewController.swift */; };
 		459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A62A3C160900489B48 /* ResetPasswordViewController.swift */; };
+		459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A92A43115200489B48 /* SearchNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		459785A02A3C150300489B48 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		459785A42A3C15FF00489B48 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		459785A62A3C160900489B48 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		459785A92A43115200489B48 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				45729F1E2A135675004C07DD /* MainTabBarController.swift */,
 				452E8B852A25B9CF00B52154 /* PhotoListView */,
 				4597859B2A3C13D900489B48 /* LoginView */,
+				459785A82A43112200489B48 /* SearchView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -362,6 +365,14 @@
 			path = JoinViewController;
 			sourceTree = "<group>";
 		};
+		459785A82A43112200489B48 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				459785A92A43115200489B48 /* SearchNavigationController.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +489,7 @@
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
 				452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */,
 				452E8B8B2A287DE100B52154 /* PhotoListCollectionViewCell.swift in Sources */,
+				459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */,
 				45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */,
 				45729F9C2A1F4B8D004C07DD /* DefaultCategoryRepository.swift in Sources */,
 				45729F5F2A160118004C07DD /* NetworkError.swift in Sources */,
