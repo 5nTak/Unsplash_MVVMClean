@@ -58,7 +58,7 @@ final class PhotoListViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
     }
-    
+    // Gesture
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
             let velocityY = velocity.y
