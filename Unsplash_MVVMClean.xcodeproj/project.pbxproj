@@ -51,6 +51,9 @@
 		45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA12A20D32B004C07DD /* PhotoUseCase.swift */; };
 		45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA32A20D43C004C07DD /* CategoryUseCase.swift */; };
 		45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA52A20D499004C07DD /* SearchUseCase.swift */; };
+		4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597859C2A3C140700489B48 /* LoginNavigationController.swift */; };
+		459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A02A3C150300489B48 /* UnderLineTextField.swift */; };
+		459785A52A3C15FF00489B48 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A42A3C15FF00489B48 /* JoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +102,9 @@
 		45729FA12A20D32B004C07DD /* PhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUseCase.swift; sourceTree = "<group>"; };
 		45729FA32A20D43C004C07DD /* CategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUseCase.swift; sourceTree = "<group>"; };
 		45729FA52A20D499004C07DD /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		4597859C2A3C140700489B48 /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
+		459785A02A3C150300489B48 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
+		459785A42A3C15FF00489B48 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 			children = (
 				452E8B922A3080D200B52154 /* ImageCache.swift */,
 				452E8B942A3080FA00B52154 /* DownloadableImageView.swift */,
+				459785A02A3C150300489B48 /* UnderLineTextField.swift */,
 				452E8B9F2A30893200B52154 /* Extension */,
 			);
 			path = Utils;
@@ -187,6 +194,7 @@
 			children = (
 				45729F1E2A135675004C07DD /* MainTabBarController.swift */,
 				452E8B852A25B9CF00B52154 /* PhotoListView */,
+				4597859B2A3C13D900489B48 /* LoginView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -323,6 +331,23 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		4597859B2A3C13D900489B48 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				4597859C2A3C140700489B48 /* LoginNavigationController.swift */,
+				459785A32A3C15DE00489B48 /* JoinViewController */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		459785A32A3C15DE00489B48 /* JoinViewController */ = {
+			isa = PBXGroup;
+			children = (
+				459785A42A3C15FF00489B48 /* JoinViewController.swift */,
+			);
+			path = JoinViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45729F952A1F4568004C07DD /* CategoryEndpoint.swift in Sources */,
+				459785A52A3C15FF00489B48 /* JoinViewController.swift in Sources */,
 				45729F4D2A15F5D3004C07DD /* Photo.swift in Sources */,
 				45729F682A160F41004C07DD /* PhotoRepository.swift in Sources */,
 				45729F832A18988D004C07DD /* (null) in Sources */,
@@ -417,11 +443,13 @@
 				452E8B902A2889E100B52154 /* PhotoListCollectionViewDataSource.swift in Sources */,
 				45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */,
 				45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */,
+				459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */,
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
 				45729F542A15FACE004C07DD /* Search.swift in Sources */,
 				45729F792A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift in Sources */,
 				45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */,
 				452E8BA32A30895700B52154 /* String+Extension.swift in Sources */,
+				4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */,
 				45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */,
 				45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */,
 				45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */,
