@@ -54,6 +54,7 @@
 		4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597859C2A3C140700489B48 /* LoginNavigationController.swift */; };
 		459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A02A3C150300489B48 /* UnderLineTextField.swift */; };
 		459785A52A3C15FF00489B48 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A42A3C15FF00489B48 /* JoinViewController.swift */; };
+		459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A62A3C160900489B48 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		4597859C2A3C140700489B48 /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		459785A02A3C150300489B48 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		459785A42A3C15FF00489B48 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		459785A62A3C160900489B48 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,8 +338,17 @@
 			children = (
 				4597859C2A3C140700489B48 /* LoginNavigationController.swift */,
 				459785A32A3C15DE00489B48 /* JoinViewController */,
+				459785A22A3C15C000489B48 /* ResetPasswordViewController */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		459785A22A3C15C000489B48 /* ResetPasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				459785A62A3C160900489B48 /* ResetPasswordViewController.swift */,
+			);
+			path = ResetPasswordViewController;
 			sourceTree = "<group>";
 		};
 		459785A32A3C15DE00489B48 /* JoinViewController */ = {
@@ -452,6 +463,7 @@
 				4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */,
 				45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */,
 				45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */,
+				459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */,
 				45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */,
 				45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */,
 				45729F582A15FB16004C07DD /* User.swift in Sources */,
