@@ -24,16 +24,16 @@ final class MainTabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "photo.fill")
         )
         
-        let photo2 = PhotoListViewController()
-        photo2.tabBarItem = UITabBarItem(
-            title: "Photo2",
-            image: UIImage(systemName: "photo"),
-            selectedImage: UIImage(systemName: "photo.fill")
+        let loginViewController = LoginNavigationController(rootViewController: LoginViewController())
+        loginViewController.tabBarItem = UITabBarItem(
+            title: "Login",
+            image: UIImage(systemName: "person.crop.circle"),
+            selectedImage: UIImage(systemName: "person.crop.circle.fill")
         )
         
         viewControllers = [
             photoListViewController,
-            photo2
+            loginViewController
         ]
     }
     
