@@ -58,6 +58,7 @@
 		459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A62A3C160900489B48 /* ResetPasswordViewController.swift */; };
 		459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A92A43115200489B48 /* SearchNavigationController.swift */; };
 		459785CC2A4BBE3600489B48 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */; };
+		459785CE2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785CD2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift */; };
 		459785D22A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785D12A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		459785A62A3C160900489B48 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		459785A92A43115200489B48 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		459785CD2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		459785D12A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */,
+				459785CD2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift */,
 				459785D02A4BC06600489B48 /* Cell */,
 			);
 			path = PhotoDetailView;
@@ -504,6 +507,7 @@
 				459785CC2A4BBE3600489B48 /* PhotoDetailViewModel.swift in Sources */,
 				45729F542A15FACE004C07DD /* Search.swift in Sources */,
 				45729F792A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift in Sources */,
+				459785CE2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift in Sources */,
 				45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */,
 				452E8BA32A30895700B52154 /* String+Extension.swift in Sources */,
 				4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */,
