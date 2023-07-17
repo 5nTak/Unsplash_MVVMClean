@@ -35,4 +35,11 @@ class PhotoListViewModel {
             }
         }
     }
+    
+    func carryData(photos: [Photo], index: Int) -> PhotoDetailViewModel {
+        let detailViewModel = PhotoDetailViewModel()
+        detailViewModel.photos = photos
+        detailViewModel.carriedIndex = index
+        return detailViewModel
+    }
 }
