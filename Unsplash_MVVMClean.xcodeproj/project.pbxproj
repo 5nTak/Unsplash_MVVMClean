@@ -60,6 +60,7 @@
 		459785B12A43217300489B48 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B02A43217300489B48 /* SearchType.swift */; };
 		459785B32A43218000489B48 /* SearchTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B22A43218000489B48 /* SearchTypeSection.swift */; };
 		459785B52A43218900489B48 /* SearchSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B42A43218900489B48 /* SearchSectionItem.swift */; };
+		459785B72A4326D600489B48 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B62A4326D600489B48 /* SearchViewModel.swift */; };
 		459785BE2A43288000489B48 /* SearchMainCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785BD2A43288000489B48 /* SearchMainCollectionViewHeader.swift */; };
 		459785C02A43288F00489B48 /* SearchCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785BF2A43288F00489B48 /* SearchCategoryCollectionViewCell.swift */; };
 		459785C22A43289A00489B48 /* SearchDiscoverColletionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785C12A43289A00489B48 /* SearchDiscoverColletionViewCell.swift */; };
@@ -124,6 +125,7 @@
 		459785B02A43217300489B48 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 		459785B22A43218000489B48 /* SearchTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeSection.swift; sourceTree = "<group>"; };
 		459785B42A43218900489B48 /* SearchSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionItem.swift; sourceTree = "<group>"; };
+		459785B62A4326D600489B48 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		459785BD2A43288000489B48 /* SearchMainCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainCollectionViewHeader.swift; sourceTree = "<group>"; };
 		459785BF2A43288F00489B48 /* SearchCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		459785C12A43289A00489B48 /* SearchDiscoverColletionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDiscoverColletionViewCell.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				459785A92A43115200489B48 /* SearchNavigationController.swift */,
+				459785B62A4326D600489B48 /* SearchViewModel.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				452E8B902A2889E100B52154 /* PhotoListCollectionViewDataSource.swift in Sources */,
 				459785BE2A43288000489B48 /* SearchMainCollectionViewHeader.swift in Sources */,
 				45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */,
+				459785B72A4326D600489B48 /* SearchViewModel.swift in Sources */,
 				45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */,
 				459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */,
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
