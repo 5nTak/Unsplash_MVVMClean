@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appearance = UITabBarAppearance()
             appearance.configureWithOpaqueBackground()
             
-            UITabBar.appearance().backgroundColor = UIColor.black
+            UITabBar.appearance().backgroundColor = UIColor.darkGray
         }
         
         return true

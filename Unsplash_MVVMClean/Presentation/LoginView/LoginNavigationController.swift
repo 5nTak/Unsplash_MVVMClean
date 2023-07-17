@@ -10,6 +10,13 @@ import UIKit
 final class LoginNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .black
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationBar.standardAppearance = appearance
+        navigationBar.compactAppearance = appearance
+        navigationBar.scrollEdgeAppearance = appearance
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
