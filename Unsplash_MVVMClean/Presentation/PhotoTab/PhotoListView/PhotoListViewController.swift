@@ -14,8 +14,8 @@ final class PhotoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
         bind()
+        setupCollectionView()
         viewModel.showPhotos()
         collectionView.reloadData()
     }

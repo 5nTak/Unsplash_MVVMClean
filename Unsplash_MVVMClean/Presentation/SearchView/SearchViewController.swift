@@ -44,9 +44,6 @@ final class SearchViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
-        collectionView.backgroundColor = .black
-        collectionView.delegate = self
-        collectionView.dataSource = searchViewDataSource
         
         collectionView.register(SearchMainCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SearchMainCollectionViewHeader")
         collectionView.register(SearchCategoryCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCategoryCollectionViewCell")
@@ -58,9 +55,9 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        setupCollectionView()
         viewModel.showContents()
         setupNavigationBar()
-        setupLayout()
     }
     
     private func setupNavigationBar() {
@@ -68,9 +65,13 @@ final class SearchViewController: UIViewController {
         navigationItem.titleView = searchController.searchBar
     }
     
-    private func setupLayout() {
+    private func setupCollectionView() {
         view.backgroundColor = .black
         view.addSubview(collectionView)
+        
+        collectionView.backgroundColor = .black
+        collectionView.delegate = self
+        collectionView.dataSource = searchViewDataSource
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
