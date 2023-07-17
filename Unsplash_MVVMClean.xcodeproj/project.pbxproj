@@ -61,6 +61,7 @@
 		459785B32A43218000489B48 /* SearchTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B22A43218000489B48 /* SearchTypeSection.swift */; };
 		459785B52A43218900489B48 /* SearchSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B42A43218900489B48 /* SearchSectionItem.swift */; };
 		459785BE2A43288000489B48 /* SearchMainCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785BD2A43288000489B48 /* SearchMainCollectionViewHeader.swift */; };
+		459785C02A43288F00489B48 /* SearchCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785BF2A43288F00489B48 /* SearchCategoryCollectionViewCell.swift */; };
 		459785CA2A4BBE2F00489B48 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785C92A4BBE2F00489B48 /* PhotoDetailViewController.swift */; };
 		459785CC2A4BBE3600489B48 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */; };
 		459785CE2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785CD2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift */; };
@@ -123,6 +124,7 @@
 		459785B22A43218000489B48 /* SearchTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeSection.swift; sourceTree = "<group>"; };
 		459785B42A43218900489B48 /* SearchSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionItem.swift; sourceTree = "<group>"; };
 		459785BD2A43288000489B48 /* SearchMainCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainCollectionViewHeader.swift; sourceTree = "<group>"; };
+		459785BF2A43288F00489B48 /* SearchCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		459785C92A4BBE2F00489B48 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
 		459785CD2A4BBEF000489B48 /* PhotoDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				459785BD2A43288000489B48 /* SearchMainCollectionViewHeader.swift */,
+				459785BF2A43288F00489B48 /* SearchCategoryCollectionViewCell.swift */,
 				459785C12A43289A00489B48 /* SearchDiscoverColletionViewCell.swift */,
 			);
 			path = Cell;
@@ -546,6 +549,7 @@
 				4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */,
 				45729F612A16013E004C07DD /* NetworkProvider.swift in Sources */,
 				45729F7B2A162239004C07DD /* UnsplashResponseDTO.swift in Sources */,
+				459785C02A43288F00489B48 /* SearchCategoryCollectionViewCell.swift in Sources */,
 				459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */,
 				459785B52A43218900489B48 /* SearchSectionItem.swift in Sources */,
 				45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */,
