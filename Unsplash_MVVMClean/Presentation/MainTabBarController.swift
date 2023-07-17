@@ -31,9 +31,17 @@ final class MainTabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "person.crop.circle.fill")
         )
         
+        let searchViewController = SearchNavigationController(rootViewController: SearchViewController())
+        searchViewController.tabBarItem = UITabBarItem(
+            title: "Search",
+            image: UIImage(systemName: "magnifyingglass"),
+            selectedImage: UIImage(systemName: "magnifyingglass")
+        )
+        
         viewControllers = [
             photoListViewController,
-            loginViewController
+            loginViewController,
+            searchViewController
         ]
     }
     
