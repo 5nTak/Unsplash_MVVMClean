@@ -41,6 +41,8 @@ final class SearchViewModel {
     var discoverPageNum = 0
     var isFetching = false
     
+    private let searchResultViewModel = SearchResultViewModel()
+    
     init(categoryUseCase: CategoryUseCase = CategoryUseCase(),
          discoverUseCase: PhotoUseCase = PhotoUseCase()) {
         self.categoryUseCase = categoryUseCase
@@ -81,5 +83,17 @@ final class SearchViewModel {
                 print(error.localizedDescription)
             }
         }
+    }
+    func resetResult() {
+        searchResultViewModel.resetResult()
+    }
+    
+    func executeSearch(searchText: String) {
+        searchResultViewModel.verifySearch(searchText: searchText)
+        searchResultViewModel.prepareSearch()
+    }
+    
+    func changeSearchType(searchType: SearchType) {
+        searchResultViewModel.currentSearchType = searchType
     }
 }
