@@ -57,6 +57,8 @@
 		459785A52A3C15FF00489B48 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A42A3C15FF00489B48 /* JoinViewController.swift */; };
 		459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A62A3C160900489B48 /* ResetPasswordViewController.swift */; };
 		459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A92A43115200489B48 /* SearchNavigationController.swift */; };
+		459785CC2A4BBE3600489B48 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */; };
+		459785D22A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785D12A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +113,8 @@
 		459785A42A3C15FF00489B48 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		459785A62A3C160900489B48 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		459785A92A43115200489B48 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
+		459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		459785D12A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +132,8 @@
 		452E8B852A25B9CF00B52154 /* PhotoListView */ = {
 			isa = PBXGroup;
 			children = (
-				452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */,
 				452E8B882A25BC1800B52154 /* PhotoListViewController.swift */,
+				452E8B862A25B9DE00B52154 /* PhotoListViewModel.swift */,
 				452E8B8F2A2889E100B52154 /* PhotoListCollectionViewDataSource.swift */,
 				452E8B8E2A28891F00B52154 /* Cell */,
 			);
@@ -199,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				45729F1E2A135675004C07DD /* MainTabBarController.swift */,
-				452E8B852A25B9CF00B52154 /* PhotoListView */,
+				459785CF2A4BC05100489B48 /* PhotoTab */,
 				4597859B2A3C13D900489B48 /* LoginView */,
 				459785A82A43112200489B48 /* SearchView */,
 			);
@@ -373,6 +377,32 @@
 			path = SearchView;
 			sourceTree = "<group>";
 		};
+		459785C82A4BBE1E00489B48 /* PhotoDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				459785CB2A4BBE3600489B48 /* PhotoDetailViewModel.swift */,
+				459785D02A4BC06600489B48 /* Cell */,
+			);
+			path = PhotoDetailView;
+			sourceTree = "<group>";
+		};
+		459785CF2A4BC05100489B48 /* PhotoTab */ = {
+			isa = PBXGroup;
+			children = (
+				452E8B852A25B9CF00B52154 /* PhotoListView */,
+				459785C82A4BBE1E00489B48 /* PhotoDetailView */,
+			);
+			path = PhotoTab;
+			sourceTree = "<group>";
+		};
+		459785D02A4BC06600489B48 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				459785D12A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,6 +501,7 @@
 				45729F9E2A1F4C14004C07DD /* DefaultSearchRepository.swift in Sources */,
 				459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */,
 				45729F6A2A160FCE004C07DD /* SearchRepository.swift in Sources */,
+				459785CC2A4BBE3600489B48 /* PhotoDetailViewModel.swift in Sources */,
 				45729F542A15FACE004C07DD /* Search.swift in Sources */,
 				45729F792A1621EE004C07DD /* UnsplashResponseDTO+Mapping.swift in Sources */,
 				45729F7E2A1894E9004C07DD /* UnsplahAPIEndpoint.swift in Sources */,
@@ -488,6 +519,7 @@
 				45729FA42A20D43C004C07DD /* CategoryUseCase.swift in Sources */,
 				45729F562A15FB12004C07DD /* Collection.swift in Sources */,
 				452E8B872A25B9DE00B52154 /* PhotoListViewModel.swift in Sources */,
+				459785D22A4BC07200489B48 /* PhotoDetailCollectionViewCell.swift in Sources */,
 				452E8B8B2A287DE100B52154 /* PhotoListCollectionViewCell.swift in Sources */,
 				459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */,
 				45729F5D2A15FFF2004C07DD /* HTTPMethod.swift in Sources */,
