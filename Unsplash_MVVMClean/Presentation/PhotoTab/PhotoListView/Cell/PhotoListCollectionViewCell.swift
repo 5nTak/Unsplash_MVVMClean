@@ -6,10 +6,9 @@
 //
 
 import UIKit
+import SnapKit
 
 final class PhotoListCollectionViewCell: UICollectionViewCell {
-    static let identifier: String = "PhotoListCollectionViewCell"
-    
     var viewModel = PhotoListViewModel()
     
     private var photoImageView: DownloadbleImageView = {
@@ -42,7 +41,9 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
+        photoImageView.isCancel = true
         photoImageView.image = nil
+        photographerLabel.text = nil
     }
 
     func setup(photo: Photo) {

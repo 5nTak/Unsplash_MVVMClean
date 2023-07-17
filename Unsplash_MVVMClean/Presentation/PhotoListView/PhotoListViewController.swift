@@ -9,14 +9,15 @@ import UIKit
 import SnapKit
 
 final class PhotoListViewController: UIViewController {
-    private var viewModel: PhotoListViewModel = PhotoListViewModel()
+    private var viewModel = PhotoListViewModel()
     private var photoListViewDataSource = PhotoListCollectionViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.showPhotos()
+        setupCollectionView()
         bind()
-        setupCollectionViewLayout()
+        viewModel.showPhotos()
+        collectionView.reloadData()
     }
     
     func bind() {
@@ -29,10 +30,8 @@ final class PhotoListViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 0
-        layout.invalidateLayout()
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(PhotoListCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoListCollectionViewCell")
         
         let refreshController = UIRefreshControl()
         refreshController.addTarget(self, action: #selector(refreshPhotos), for: .valueChanged)
@@ -47,12 +46,12 @@ final class PhotoListViewController: UIViewController {
         collectionView.refreshControl?.endRefreshing()
     }
     
-    private func setupCollectionViewLayout() {
+    private func setupCollectionView() {
         view.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.dataSource = photoListViewDataSource
         collectionView.prefetchDataSource = self
-        
+        collectionView.register(PhotoListCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoListCollectionViewCell")
         view.backgroundColor = .systemBackground
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
