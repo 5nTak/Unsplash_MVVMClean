@@ -57,6 +57,7 @@
 		459785A52A3C15FF00489B48 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A42A3C15FF00489B48 /* JoinViewController.swift */; };
 		459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A62A3C160900489B48 /* ResetPasswordViewController.swift */; };
 		459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A92A43115200489B48 /* SearchNavigationController.swift */; };
+		459785AC2A43123500489B48 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785AB2A43123500489B48 /* SearchViewController.swift */; };
 		459785B12A43217300489B48 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B02A43217300489B48 /* SearchType.swift */; };
 		459785B32A43218000489B48 /* SearchTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B22A43218000489B48 /* SearchTypeSection.swift */; };
 		459785B52A43218900489B48 /* SearchSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B42A43218900489B48 /* SearchSectionItem.swift */; };
@@ -123,6 +124,7 @@
 		459785A42A3C15FF00489B48 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		459785A62A3C160900489B48 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		459785A92A43115200489B48 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
+		459785AB2A43123500489B48 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		459785B02A43217300489B48 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 		459785B22A43218000489B48 /* SearchTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeSection.swift; sourceTree = "<group>"; };
 		459785B42A43218900489B48 /* SearchSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionItem.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				459785A92A43115200489B48 /* SearchNavigationController.swift */,
+				459785AB2A43123500489B48 /* SearchViewController.swift */,
 				459785B62A4326D600489B48 /* SearchViewModel.swift */,
 				459785B82A43274B00489B48 /* SearchViewDataSource.swift */,
 			);
@@ -535,6 +538,7 @@
 				45729F832A18988D004C07DD /* (null) in Sources */,
 				45729F912A1F3E91004C07DD /* SearchCollectionEndpoint.swift in Sources */,
 				45729F5B2A15FF4D004C07DD /* Endpoint.swift in Sources */,
+				459785AC2A43123500489B48 /* SearchViewController.swift in Sources */,
 				452E8B952A3080FA00B52154 /* DownloadableImageView.swift in Sources */,
 				45729F652A16023F004C07DD /* DefaultNetworkProvider.swift in Sources */,
 				452E8BA52A30898700B52154 /* UIViewController+Extension.swift in Sources */,
