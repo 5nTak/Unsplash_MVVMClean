@@ -53,6 +53,7 @@
 		45729FA62A20D499004C07DD /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45729FA52A20D499004C07DD /* SearchUseCase.swift */; };
 		458C7C002A515174002A60D1 /* SearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C7BFF2A515174002A60D1 /* SearchCollectionCell.swift */; };
 		458C7C022A515179002A60D1 /* SearchUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C7C012A515179002A60D1 /* SearchUserCell.swift */; };
+		458C7C042A52DF9B002A60D1 /* SearchResultCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C7C032A52DF9B002A60D1 /* SearchResultCollectionViewDataSource.swift */; };
 		4597859D2A3C140700489B48 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597859C2A3C140700489B48 /* LoginNavigationController.swift */; };
 		4597859F2A3C143700489B48 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597859E2A3C143700489B48 /* LoginViewController.swift */; };
 		459785A12A3C150300489B48 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A02A3C150300489B48 /* UnderLineTextField.swift */; };
@@ -123,6 +124,7 @@
 		45729FA52A20D499004C07DD /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		458C7BFF2A515174002A60D1 /* SearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionCell.swift; sourceTree = "<group>"; };
 		458C7C012A515179002A60D1 /* SearchUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserCell.swift; sourceTree = "<group>"; };
+		458C7C032A52DF9B002A60D1 /* SearchResultCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		4597859C2A3C140700489B48 /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		4597859E2A3C143700489B48 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		459785A02A3C150300489B48 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				459785C32A456E1000489B48 /* SearchResultViewModel.swift */,
+				458C7C032A52DF9B002A60D1 /* SearchResultCollectionViewDataSource.swift */,
 				458C7BFE2A51515D002A60D1 /* Cell */,
 			);
 			path = SearchResultView;
@@ -593,6 +596,7 @@
 				459785C02A43288F00489B48 /* SearchCategoryCollectionViewCell.swift in Sources */,
 				458C7C022A515179002A60D1 /* SearchUserCell.swift in Sources */,
 				459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */,
+				458C7C042A52DF9B002A60D1 /* SearchResultCollectionViewDataSource.swift in Sources */,
 				459785B52A43218900489B48 /* SearchSectionItem.swift in Sources */,
 				45729FA22A20D32B004C07DD /* PhotoUseCase.swift in Sources */,
 				45729F6C2A1611EE004C07DD /* CategoryRepository.swift in Sources */,
