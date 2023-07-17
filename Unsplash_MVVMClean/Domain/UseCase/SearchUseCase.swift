@@ -10,7 +10,7 @@ import Foundation
 final class SearchUseCase {
     private let searchRepository: SearchRepository
     
-    init(searchRepository: SearchRepository) {
+    init(searchRepository: SearchRepository = DefaultSearchRepository()) {
         self.searchRepository = searchRepository
     }
     
@@ -25,5 +25,4 @@ final class SearchUseCase {
     func fetchSearchUsers(searchText: String, searchType: String, pageNum: Int, completion: @escaping (Result<SearchObject<User>, Error>) -> Void) -> URLSessionTask? {
         return searchRepository.fetchSearchUsersResult(searchText: searchText, searchType: searchType, pageNum: pageNum, completion: completion)
     }
-    
 }
