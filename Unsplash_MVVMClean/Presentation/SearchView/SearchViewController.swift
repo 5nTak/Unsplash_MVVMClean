@@ -19,7 +19,7 @@ final class SearchViewController: UIViewController {
     }
     
     private lazy var searchController: UISearchController = {
-        let searchController = UISearchController()
+        let searchController = UISearchController(searchResultsController: viewModel.makeSearchResultViewController())
         searchController.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
         
@@ -93,12 +93,14 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchBarText = searchBar.text, !searchBarText.isEmpty {
             isShowScopeBar = true
+            viewModel.executeSearch(searchText: searchBarText)
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(false, animated: true)
         isShowScopeBar = false
+        viewModel.resetResult()
     }
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
@@ -111,6 +113,9 @@ extension SearchViewController: UISearchBarDelegate {
         default:
             selectionType = .photos
         }
+        
+        viewModel.changeSearchType(searchType: selectionType)
+        collectionView.setContentOffset(.zero, animated: true)
     }
 }
 

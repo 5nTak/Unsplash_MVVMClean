@@ -61,6 +61,7 @@
 		459785A72A3C160900489B48 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A62A3C160900489B48 /* ResetPasswordViewController.swift */; };
 		459785AA2A43115200489B48 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785A92A43115200489B48 /* SearchNavigationController.swift */; };
 		459785AC2A43123500489B48 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785AB2A43123500489B48 /* SearchViewController.swift */; };
+		459785AE2A43129700489B48 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785AD2A43129700489B48 /* SearchResultViewController.swift */; };
 		459785B12A43217300489B48 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B02A43217300489B48 /* SearchType.swift */; };
 		459785B32A43218000489B48 /* SearchTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B22A43218000489B48 /* SearchTypeSection.swift */; };
 		459785B52A43218900489B48 /* SearchSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459785B42A43218900489B48 /* SearchSectionItem.swift */; };
@@ -132,6 +133,7 @@
 		459785A62A3C160900489B48 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		459785A92A43115200489B48 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		459785AB2A43123500489B48 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		459785AD2A43129700489B48 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		459785B02A43217300489B48 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 		459785B22A43218000489B48 /* SearchTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeSection.swift; sourceTree = "<group>"; };
 		459785B42A43218900489B48 /* SearchSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionItem.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 		459785C72A45AD3900489B48 /* SearchResultView */ = {
 			isa = PBXGroup;
 			children = (
+				459785AD2A43129700489B48 /* SearchResultViewController.swift */,
 				459785C32A456E1000489B48 /* SearchResultViewModel.swift */,
 				458C7C032A52DF9B002A60D1 /* SearchResultCollectionViewDataSource.swift */,
 				458C7BFE2A51515D002A60D1 /* Cell */,
@@ -620,6 +623,7 @@
 				45729F932A1F44DF004C07DD /* SearchPhotoEndpoint.swift in Sources */,
 				45729F522A15F9A5004C07DD /* ImageURLStyle.swift in Sources */,
 				45729F9A2A1F4ABC004C07DD /* DefaultPhotoRepository.swift in Sources */,
+				459785AE2A43129700489B48 /* SearchResultViewController.swift in Sources */,
 				45729F872A18C375004C07DD /* PhotoListEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -84,6 +84,11 @@ final class SearchViewModel {
             }
         }
     }
+    
+    func makeSearchResultViewController() -> SearchResultViewController {
+        return SearchResultViewController(viewModel: searchResultViewModel)
+    }
+    
     func resetResult() {
         searchResultViewModel.resetResult()
     }
