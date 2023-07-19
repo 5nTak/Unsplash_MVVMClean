@@ -26,50 +26,85 @@ final class SearchResultCollectionViewDataSource: NSObject, UICollectionViewData
                 return UICollectionViewCell()
             }
             
-            if items.count - 1 < indexPath.row {
-                return UICollectionViewCell()
+            if items.count == 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    guard let item = self.items[indexPath.row] as? Photo else {
+                        return
+                    }
+                    cell.setup(photo: item)
+                }
+                return cell
+            } else {
+                if items.count - 1 < indexPath.row {
+                    return UICollectionViewCell()
+                }
+                
+                print("collection's indexPath:\(indexPath.row)")
+                guard let item = items[indexPath.row] as? Photo else {
+                    return UICollectionViewCell()
+                }
+                
+                cell.setup(photo: item)
+                
+                return cell
             }
-            
-            guard let item = items[indexPath.row] as? Photo else {
-                return UICollectionViewCell()
-            }
-            cell.setup(photo: item)
-            
-            return cell
             
         case .collections:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionCell", for: indexPath) as? SearchCollectionCell else {
                 return UICollectionViewCell()
             }
             
-            if items.count - 1 < indexPath.row {
-                return UICollectionViewCell()
+            if items.count == 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    guard let item = self.items[indexPath.row] as? Collection else {
+                        return
+                    }
+                cell.setup(collection: item)
+                }
+                return cell
+            } else {
+                if items.count - 1 < indexPath.row {
+                    return UICollectionViewCell()
+                }
+                
+                print("collection's indexPath:\(indexPath.row)")
+                guard let item = items[indexPath.row] as? Collection else {
+                    return UICollectionViewCell()
+                }
+                
+                cell.setup(collection: item)
+                
+                return cell
             }
             
-            guard let item = items[indexPath.row] as? Collection else {
-                return UICollectionViewCell()
-            }
-            
-            cell.setup(collection: item)
-            
-            return cell
             
         case .users:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchUserCell", for: indexPath) as? SearchUserCell else {
                 return UICollectionViewCell()
             }
             
-            if items.count - 1 < indexPath.row {
-                return UICollectionViewCell()
+            if items.count == 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    guard let item = self.items[indexPath.row] as? User else {
+                        return
+                    }
+                cell.setup(user: item)
+                }
+                return cell
+            } else {
+                if items.count - 1 < indexPath.row {
+                    return UICollectionViewCell()
+                }
+                
+                print("collection's indexPath:\(indexPath.row)")
+                guard let item = items[indexPath.row] as? User else {
+                    return UICollectionViewCell()
+                }
+                
+                cell.setup(user: item)
+                
+                return cell
             }
-            
-            guard let item = items[indexPath.row] as? User else {
-                return UICollectionViewCell()
-            }
-            
-            cell.setup(user: item)
-            
-            return cell
         }
     }
 }
