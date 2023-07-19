@@ -17,12 +17,12 @@ final class PhotoListViewController: UIViewController {
         bind()
         setupCollectionView()
         viewModel.showPhotos()
-        collectionView.reloadData()
     }
     
     func bind() {
         viewModel.bindPhotos(closure: { [weak self] photos in
             self?.photoListViewDataSource.photos = photos
+            self?.updateCollectionView()
         })
     }
     
@@ -55,6 +55,12 @@ final class PhotoListViewController: UIViewController {
         view.backgroundColor = .systemBackground
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+    }
+    
+    private func updateCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
         }
     }
     // Gesture

@@ -43,10 +43,11 @@ final class SearchResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.showItems()
         bindSearchItems()
-        setupCollectionView()
         bindSearchType()
+        viewModel.showItems()
+        setupCollectionView()
+
     }
     
     private func bindSearchItems() {
@@ -60,6 +61,7 @@ final class SearchResultViewController: UIViewController {
         viewModel.bindSearchTypes { [weak self] type in
             self?.searchResultCollectionViewDataSource.currentSearchType = type
             self?.currentSearchType = type
+            self?.bindSearchItems()
             self?.updateCollectionView()
         }
     }
@@ -82,9 +84,7 @@ final class SearchResultViewController: UIViewController {
         }
         
         collectionView.backgroundColor = .black
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
+        updateCollectionView()
         
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = .zero
     }
@@ -128,10 +128,9 @@ extension SearchResultViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SearchResultViewController: UICollectionViewDataSourcePrefetching {
-    
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            if viewModel.items.count == indexPath.row + 6 {
+            if viewModel.items.count == indexPath.row + 2 {
                 viewModel.pageNum += 1
                 viewModel.showPhotoList()
                 bindSearchItems()

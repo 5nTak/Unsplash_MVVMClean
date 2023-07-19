@@ -82,6 +82,13 @@ final class SearchViewController: UIViewController {
     func bind() {
         viewModel.bindContents { [weak self] contents in
             self?.searchViewDataSource.contents = contents
+            self?.updateCollectionView()
+        }
+    }
+    
+    private func updateCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
         }
     }
 }
