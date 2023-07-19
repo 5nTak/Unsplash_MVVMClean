@@ -16,18 +16,18 @@ final class SearchResultViewModel {
     }
     
     var searchHandler: (([Searchable]) -> Void)?
+    var searchTypeHandler: ((SearchType) -> Void)?
     var searchText: String = ""
-    var searchType: String = ""
     var pageNum: Int = 0
     var searchLastPageNum = 0
     var currentSearchType: SearchType = .photos {
         didSet {
             verifySearch()
             prepareSearch()
+            searchHandler?(items)
             searchTypeHandler?(currentSearchType)
         }
     }
-    var searchTypeHandler: ((SearchType) -> Void)?
     private var isSearchFetching = false
     
     private let photoSearchUseCase: SearchUseCase
@@ -63,7 +63,7 @@ final class SearchResultViewModel {
     
     var task: URLSessionTask?
     func showPhotoList() {
-        task = photoSearchUseCase.fetchSearchPhotos(searchText: searchText, searchType: searchType, pageNum: pageNum) { result in
+        task = photoSearchUseCase.fetchSearchPhotos(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: pageNum) { result in
             switch result {
             case .success(let data):
                 self.items.append(contentsOf: data.results)
@@ -74,7 +74,7 @@ final class SearchResultViewModel {
     }
     
     func showCollectionList() {
-        task = collectionSearchUseCase.fetchSearchCollections(searchText: searchText, searchType: searchType, pageNum: pageNum) { result in
+        task = collectionSearchUseCase.fetchSearchCollections(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: pageNum) { result in
             switch result {
             case .success(let data):
                 self.items.append(contentsOf: data.results)
@@ -85,7 +85,7 @@ final class SearchResultViewModel {
     }
     
     func showUserList() {
-        task = userSearchUseCase.fetchSearchUsers(searchText: searchText, searchType: searchType, pageNum: pageNum) { result in
+        task = userSearchUseCase.fetchSearchUsers(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: pageNum) { result in
             switch result {
             case .success(let data):
                 self.items.append(contentsOf: data.results)
@@ -114,7 +114,6 @@ final class SearchResultViewModel {
         }
         
         initialSearchState()
-
     }
     
     func prepareSearch() {
