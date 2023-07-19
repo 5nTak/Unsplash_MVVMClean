@@ -132,8 +132,8 @@ extension SearchResultViewController: UICollectionViewDataSourcePrefetching {
         for indexPath in indexPaths {
             if viewModel.items.count == indexPath.row + 2 {
                 viewModel.pageNum += 1
-                viewModel.showPhotoList()
                 bindSearchItems()
+                viewModel.showItems()
             }
             collectionView.reloadData()
         }
