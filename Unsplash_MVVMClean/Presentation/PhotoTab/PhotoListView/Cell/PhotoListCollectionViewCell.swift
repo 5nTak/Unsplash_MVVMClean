@@ -44,6 +44,7 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
         photoImageView.isCancel = true
         photoImageView.image = nil
         photographerLabel.text = nil
+        photoImageView.cancelLoadingImage()
     }
 
     func setup(photo: Photo) {

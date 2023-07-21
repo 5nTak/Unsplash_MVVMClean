@@ -45,6 +45,7 @@ final class SearchUserCell: UICollectionViewCell {
         super.prepareForReuse()
         imageView.isCancel = true
         imageView.image = nil
+        imageView.cancelLoadingImage()
     }
     
     override init(frame: CGRect) {

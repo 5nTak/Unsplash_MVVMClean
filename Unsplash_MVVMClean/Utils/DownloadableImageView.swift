@@ -108,5 +108,10 @@ final class DownloadbleImageView: UIImageView {
         }
         dataTask.resume()
     }
+    
+    func cancelLoadingImage() {
+        dataTask?.cancel()
+        dataTask = nil
+    }
 }
 

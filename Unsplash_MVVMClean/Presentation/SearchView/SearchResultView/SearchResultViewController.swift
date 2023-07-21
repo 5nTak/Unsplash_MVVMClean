@@ -62,7 +62,6 @@ final class SearchResultViewController: UIViewController {
             self?.searchResultCollectionViewDataSource.currentSearchType = type
             self?.currentSearchType = type
             self?.bindSearchItems()
-            self?.updateCollectionView()
         }
     }
     
@@ -84,7 +83,6 @@ final class SearchResultViewController: UIViewController {
         }
         
         collectionView.backgroundColor = .black
-        updateCollectionView()
         
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = .zero
     }

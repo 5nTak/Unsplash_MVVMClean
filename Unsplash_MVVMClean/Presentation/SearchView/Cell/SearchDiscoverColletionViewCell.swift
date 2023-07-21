@@ -29,6 +29,7 @@ final class SearchDiscoverCollectionViewCell: UICollectionViewCell {
         
         imageView.isCancel = false
         imageView.image = nil
+        imageView.cancelLoadingImage()
         nameLabel.text = ""
     }
     

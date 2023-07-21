@@ -27,7 +27,7 @@ final class SearchCollectionCell: UICollectionViewCell {
     
     private var thirdImageView: DownloadbleImageView = {
         let imageView = DownloadbleImageView(frame: .zero)
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         
         return imageView
@@ -78,6 +78,7 @@ final class SearchCollectionCell: UICollectionViewCell {
         ].forEach {
             $0.isCancel = true
             $0.image = nil
+            $0.cancelLoadingImage()
         }
     }
     

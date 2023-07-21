@@ -29,6 +29,7 @@ final class SearchCategoryCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         imageView.isCancel = true
         imageView.image = nil
+        imageView.cancelLoadingImage()
         titleLabel.text = nil
     }
     

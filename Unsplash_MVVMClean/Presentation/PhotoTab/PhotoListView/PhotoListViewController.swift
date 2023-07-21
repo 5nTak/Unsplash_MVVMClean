@@ -103,7 +103,6 @@ extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
 
 extension PhotoListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
         let detailVM = viewModel.carryData(photos: viewModel.photos, index: indexPath.row)
         let detailVC = PhotoDetailViewController(viewModel: detailVM)
         detailVC.modalPresentationStyle = .overFullScreen
@@ -119,7 +118,6 @@ extension PhotoListViewController: UICollectionViewDataSourcePrefetching {
                 viewModel.showPhotos()
                 bind()
             }
-            collectionView.reloadData()
         }
     }
 }

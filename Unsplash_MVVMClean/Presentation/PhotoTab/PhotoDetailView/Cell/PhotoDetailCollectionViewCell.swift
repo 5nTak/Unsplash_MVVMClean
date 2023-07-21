@@ -53,5 +53,6 @@ final class PhotoDetailCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         imageView.isCancel = true
         imageView.image = nil
+        imageView.cancelLoadingImage()
     }
 }

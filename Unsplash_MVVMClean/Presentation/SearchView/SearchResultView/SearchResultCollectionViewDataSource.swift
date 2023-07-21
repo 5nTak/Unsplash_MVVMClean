@@ -39,7 +39,6 @@ final class SearchResultCollectionViewDataSource: NSObject, UICollectionViewData
                     return UICollectionViewCell()
                 }
                 
-                print("collection's indexPath:\(indexPath.row)")
                 guard let item = items[indexPath.row] as? Photo else {
                     return UICollectionViewCell()
                 }
@@ -67,7 +66,6 @@ final class SearchResultCollectionViewDataSource: NSObject, UICollectionViewData
                     return UICollectionViewCell()
                 }
                 
-                print("collection's indexPath:\(indexPath.row)")
                 guard let item = items[indexPath.row] as? Collection else {
                     return UICollectionViewCell()
                 }
@@ -96,7 +94,6 @@ final class SearchResultCollectionViewDataSource: NSObject, UICollectionViewData
                     return UICollectionViewCell()
                 }
                 
-                print("collection's indexPath:\(indexPath.row)")
                 guard let item = items[indexPath.row] as? User else {
                     return UICollectionViewCell()
                 }
