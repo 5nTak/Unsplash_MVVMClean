@@ -83,8 +83,6 @@ final class SearchResultViewController: UIViewController {
         }
         
         collectionView.backgroundColor = .black
-        
-        (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = .zero
     }
 }
 
