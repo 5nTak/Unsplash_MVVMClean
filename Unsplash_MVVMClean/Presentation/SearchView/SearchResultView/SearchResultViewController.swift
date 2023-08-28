@@ -98,7 +98,7 @@ extension SearchResultViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: cellWidth, height: cellHeight)
             
         case .collections:
-            let cellWidth = collectionView.frame.width - 20
+            let cellWidth = collectionView.frame.width
             let cellHeight = cellWidth * 0.4
             return CGSize(width: cellWidth, height: cellHeight)
             
