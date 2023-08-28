@@ -1,9 +1,7 @@
 # Unsplash_MVVMClean
 전 세계 사진작가들의 고화질의 이미지를 제공하는 Unsplash앱의 API를 활용하여 클론코딩한 앱입니다.
 
-## 목차
-- [기능](#기능)
-- [브랜치별 사용 기술 및 핵심 구현 내용](#브랜치별-사용-기술-및-핵심-구현-내용)
+### [Presentation Layer 핵심 구현 내용](https://github.com/5nTak/Unsplash_MVVMClean/tree/Feature/Presentation)
 
 ## 기능
 
@@ -62,4 +60,3 @@
 </br>
 
 ---------
-## 브랜치별 사용 기술 및 핵심 구현 내용
