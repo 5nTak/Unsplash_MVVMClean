@@ -118,7 +118,6 @@ final class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
         setupGesture()
     }
@@ -178,7 +177,7 @@ final class PhotoDetailViewController: UIViewController {
         collectionView.scrollToItem(at: IndexPath(row: viewModel.carriedIndex, section: 0), at: .centeredHorizontally, animated: false)
     }
     
-    func setupGesture() {
+    private func setupGesture() {
         // fullScreen toggle 제스처 등록
         let fullscreenGesture = UITapGestureRecognizer(target: self, action: #selector(toggleFullScreen))
         self.view.addGestureRecognizer(fullscreenGesture)

@@ -79,7 +79,7 @@ final class SearchViewController: UIViewController {
         }
     }
     
-    func bind() {
+    private func bind() {
         viewModel.bindContents { [weak self] contents in
             self?.searchViewDataSource.contents = contents
             self?.updateCollectionView()

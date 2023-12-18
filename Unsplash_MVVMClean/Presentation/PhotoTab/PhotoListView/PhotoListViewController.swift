@@ -19,7 +19,7 @@ final class PhotoListViewController: UIViewController {
         viewModel.showPhotos()
     }
     
-    func bind() {
+    private func bind() {
         viewModel.bindPhotos(closure: { [weak self] photos in
             self?.photoListViewDataSource.photos = photos
             self?.updateCollectionView()
@@ -40,7 +40,7 @@ final class PhotoListViewController: UIViewController {
         return collectionView
     }()
     
-    @objc func refreshPhotos() {
+    @objc private func refreshPhotos() {
         viewModel.photos = []
         viewModel.showPhotos()
         collectionView.refreshControl?.endRefreshing()
