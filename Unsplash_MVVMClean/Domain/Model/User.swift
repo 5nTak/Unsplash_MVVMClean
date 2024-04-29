@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct User: Searchable {
+struct User: Searchable, Hashable {
     let id: String
     let name: String
     let username: String
     let profileImage: ProfileImage
     
-    struct ProfileImage {
+    struct ProfileImage: Hashable {
         let small: String
         let medium: String
         let large: String

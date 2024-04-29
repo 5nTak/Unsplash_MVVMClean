@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ImageURLStyle {
+struct ImageURLStyle: Hashable {
     let raw: String
     let full: String
     let regular: String

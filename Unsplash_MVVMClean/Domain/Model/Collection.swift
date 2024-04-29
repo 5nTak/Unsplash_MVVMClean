@@ -7,7 +7,16 @@
 
 import Foundation
 
-struct Collection: Searchable {
+struct Collection: Searchable, Equatable {
+    static func == (lhs: Collection, rhs: Collection) -> Bool {
+        return lhs.id == rhs.id
+        && lhs.title == rhs.title
+        && lhs.description == rhs.description
+        && lhs.totalPhotos == rhs.totalPhotos
+        && lhs.previewPhotos == rhs.previewPhotos
+        && lhs.user == rhs.user
+    }
+    
     let id: String
     let title: String
     let description: String?
@@ -15,7 +24,7 @@ struct Collection: Searchable {
     let previewPhotos: [PreviewPhoto]
     let user: User
     
-    struct PreviewPhoto {
+    struct PreviewPhoto: Equatable {
         let id: String
         let urls: ImageURLStyle
     }

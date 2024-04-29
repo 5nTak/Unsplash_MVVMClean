@@ -11,6 +11,7 @@ import SnapKit
 final class SearchViewController: UIViewController {
     private var viewModel = SearchViewModel()
     private var searchViewDataSource = SearchViewCollectionViewDataSource()
+    private var delegate: DetailViewDelegate?
     
     private var isShowScopeBar = false {
         willSet {
@@ -48,6 +49,7 @@ final class SearchViewController: UIViewController {
         collectionView.register(SearchMainCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SearchMainCollectionViewHeader")
         collectionView.register(SearchCategoryCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCategoryCollectionViewCell")
         collectionView.register(SearchDiscoverCollectionViewCell.self, forCellWithReuseIdentifier: "SearchDiscoverCollectionViewCell")
+        collectionView.delegate = self
         
         return collectionView
     }()
@@ -70,7 +72,6 @@ final class SearchViewController: UIViewController {
         view.addSubview(collectionView)
         
         collectionView.backgroundColor = .black
-        collectionView.delegate = self
         collectionView.dataSource = searchViewDataSource
         
         collectionView.snp.makeConstraints {
@@ -125,18 +126,6 @@ extension SearchViewController: UISearchBarDelegate {
         viewModel.changeSearchType(searchType: selectionType)
         collectionView.setContentOffset(.zero, animated: true)
     }
-}
-
-extension SearchViewController: UICollectionViewDelegate {
-    
-//    셀 선택될 경우 화면전환 discover셀은 DetailView로 넘어가게끔
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        switch viewModel.contents[indexPath.row].type {
-//        case .category:
-//        case .discover:
-//        default:
-//        }
-//    }
 }
 
 extension SearchViewController {
@@ -196,5 +185,21 @@ extension SearchViewController {
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         
         return sectionHeader
+    }
+}
+
+extension SearchViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch self.viewModel.contents[indexPath.section].type {
+        case .category: break
+        case .discover:
+            let detailVM = PhotoListViewModel().carryData(photos: self.viewModel.contents[1].items as? [Photo] ?? [], index: indexPath.row)
+            let detailVC = PhotoDetailViewController(viewModel: detailVM)
+            detailVC.sectionIndex = 1
+            detailVC.modalPresentationStyle = .overFullScreen
+            detailVC.delegate = delegate
+            detailVC.listView = collectionView
+            self.present(detailVC, animated: true)
+        }
     }
 }

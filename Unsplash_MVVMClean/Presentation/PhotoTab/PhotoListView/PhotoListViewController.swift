@@ -9,8 +9,14 @@ import UIKit
 import SnapKit
 
 final class PhotoListViewController: UIViewController {
+    enum Section: CaseIterable {
+        case list
+    }
+    
     private var viewModel = PhotoListViewModel()
     private var photoListViewDataSource = PhotoListCollectionViewDataSource()
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Photo>?
+    private var delegate: DetailViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +25,14 @@ final class PhotoListViewController: UIViewController {
         viewModel.showPhotos()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     private func bind() {
-        viewModel.bindPhotos(closure: { [weak self] photos in
-            self?.photoListViewDataSource.photos = photos
-            self?.updateCollectionView()
-        })
+        viewModel.photosHandler = { photos in
+            self.applySnapshot(photos: photos)
+        }
     }
     
     private var collectionView: UICollectionView = {
@@ -32,26 +41,15 @@ final class PhotoListViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        let refreshController = UIRefreshControl()
-        refreshController.addTarget(self, action: #selector(refreshPhotos), for: .valueChanged)
-        collectionView.refreshControl = refreshController
-        
+
         return collectionView
     }()
     
-    @objc private func refreshPhotos() {
-        viewModel.photos = []
-        viewModel.showPhotos()
-        collectionView.refreshControl?.endRefreshing()
-    }
-    
     private func setupCollectionView() {
         view.addSubview(collectionView)
+        configureDataSource()
         collectionView.delegate = self
-        collectionView.dataSource = photoListViewDataSource
         collectionView.prefetchDataSource = self
-        collectionView.register(PhotoListCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoListCollectionViewCell")
         view.backgroundColor = .systemBackground
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -63,17 +61,35 @@ final class PhotoListViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    private func configureDataSource() {
+        let cellRegistration = UICollectionView.CellRegistration<PhotoListCollectionViewCell, Photo> { cell, indexPath, photo in
+            cell.setup(photo: photo)
+        }
+        dataSource = UICollectionViewDiffableDataSource<Section, Photo>(collectionView: collectionView, cellProvider: { collectionView, indexPath, photo in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: photo)
+        })
+    }
+    
+    private func applySnapshot(photos: [Photo]) {
+        DispatchQueue.main.async {
+            var snapshot = NSDiffableDataSourceSnapshot<Section, Photo>()
+            snapshot.appendSections([.list])
+            snapshot.appendItems(photos)
+            self.dataSource?.apply(snapshot, animatingDifferences: true)
+        }
+    }
     // Gesture
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
-            let velocityY = velocity.y
-            guard velocityY != 0 else {
+            guard velocity.y != 0 else {
                 return
             }
             
             var tabbarHeight: CGFloat = UIScreen.main.bounds.maxY
             var tabbarAlpha: CGFloat = 0
-            if velocityY < 0 {
+            
+            if velocity.y < 0 {
                 tabbarHeight -= self?.tabBarController?.tabBar.frame.height ?? 0
                 tabbarAlpha = 1
             }
@@ -106,7 +122,17 @@ extension PhotoListViewController: UICollectionViewDelegate {
         let detailVM = viewModel.carryData(photos: viewModel.photos, index: indexPath.row)
         let detailVC = PhotoDetailViewController(viewModel: detailVM)
         detailVC.modalPresentationStyle = .overFullScreen
+        detailVC.delegate = delegate
+        detailVC.listView = collectionView
         self.present(detailVC, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        guard collectionView.frame.size.height > 0 else { return }
+        if offsetY + collectionView.frame.size.height >= collectionView.contentSize.height - 200 {
+            viewModel.showPhotos()
+        }
     }
 }
 

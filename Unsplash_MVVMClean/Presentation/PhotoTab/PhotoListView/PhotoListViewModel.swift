@@ -21,10 +21,6 @@ class PhotoListViewModel {
         self.photoUseCase = photoUseCase
     }
     
-    func bindPhotos(closure: @escaping ([Photo]) -> Void) {
-        self.photosHandler = closure
-    }
-    
     func showPhotos() {
         photoUseCase.fetchPhotos(pageNum: pageNum) { result in
             switch result {

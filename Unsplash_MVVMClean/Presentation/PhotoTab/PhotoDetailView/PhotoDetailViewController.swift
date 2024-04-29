@@ -14,6 +14,9 @@ final class PhotoDetailViewController: UIViewController {
     private var currentItemRow: Int {
         return Int(collectionView.contentOffset.x / collectionView.frame.size.width)
     }
+    var delegate: DetailViewDelegate?
+    weak var listView: UICollectionView?
+    var sectionIndex: Int = 0
     
     init(viewModel: PhotoDetailViewModel) {
         self.viewModel = viewModel
@@ -218,7 +221,8 @@ extension PhotoDetailViewController: UICollectionViewDelegateFlowLayout {
 
 extension PhotoDetailViewController {
     @objc private func dismissDetailView() {
-        self.dismiss(animated: false, completion: nil)
+        self.didDismissDetailView(sectionIndex: sectionIndex)
+        self.dismiss(animated: false)
     }
     
     @objc private func sharePhoto() {
@@ -255,6 +259,7 @@ extension PhotoDetailViewController {
             )
         case .ended:
             if viewModel.viewPullDownY >= 200 {
+                self.dismissDetailView()
                 dismiss(animated: true)
                 break
             }
@@ -275,4 +280,16 @@ extension PhotoDetailViewController {
             break
         }
     }
+}
+
+extension PhotoDetailViewController: DetailViewDelegate {
+    func didDismissDetailView(sectionIndex: Int) {
+        guard let listView = listView else { return }
+        let indexPath = IndexPath(row: currentItemRow, section: sectionIndex)
+        listView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+    }
+}
+
+protocol DetailViewDelegate {
+    func didDismissDetailView(sectionIndex: Int)
 }

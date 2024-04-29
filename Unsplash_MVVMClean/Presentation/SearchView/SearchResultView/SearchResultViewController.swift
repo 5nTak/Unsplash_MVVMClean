@@ -16,6 +16,7 @@ final class SearchResultViewController: UIViewController {
         }
     }
     private var searchResultCollectionViewDataSource = SearchResultCollectionViewDataSource()
+    private var delegate: DetailViewDelegate?
     
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -47,7 +48,7 @@ final class SearchResultViewController: UIViewController {
         bindSearchType()
         viewModel.showItems()
         setupCollectionView()
-
+        
     }
     
     private func bindSearchItems() {
@@ -132,6 +133,22 @@ extension SearchResultViewController: UICollectionViewDataSourcePrefetching {
                 viewModel.showItems()
             }
             collectionView.reloadData()
+        }
+    }
+}
+
+extension SearchResultViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch currentSearchType {
+        case .photos:
+            let detailVM = PhotoListViewModel().carryData(photos: self.viewModel.items as? [Photo] ?? [], index: indexPath.row)
+            let detailVC = PhotoDetailViewController(viewModel: detailVM)
+            detailVC.modalPresentationStyle = .overFullScreen
+            detailVC.delegate = delegate
+            detailVC.listView = collectionView
+            self.present(detailVC, animated: true)
+        case .collections: break
+        case .users: break
         }
     }
 }
