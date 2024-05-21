@@ -7,13 +7,12 @@
 
 import Foundation
 
-class PhotoListViewModel {
+final class PhotoListViewModel {
     var photos: [Photo] = [] {
         didSet {
             photosHandler?(photos)
         }
     }
-    var pageNum: Int = 0
     private let photoUseCase: PhotoUseCase
     var photosHandler: (([Photo]) -> Void)?
     
@@ -21,8 +20,8 @@ class PhotoListViewModel {
         self.photoUseCase = photoUseCase
     }
     
-    func showPhotos() {
-        photoUseCase.fetchPhotos(pageNum: pageNum) { result in
+    func showPhotos(page: Int) {
+        photoUseCase.fetchPhotos(pageNum: page) { result in
             switch result {
             case .success(let data):
                 self.photos.append(contentsOf: data)

@@ -17,6 +17,7 @@ final class SearchResultViewController: UIViewController {
     }
     private var searchResultCollectionViewDataSource = SearchResultCollectionViewDataSource()
     private var delegate: DetailViewDelegate?
+    private var page: Int = 1
     
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -46,7 +47,7 @@ final class SearchResultViewController: UIViewController {
         super.viewDidLoad()
         bindSearchItems()
         bindSearchType()
-        viewModel.showItems()
+        viewModel.showItems(page: self.page)
         setupCollectionView()
         
     }
@@ -128,9 +129,10 @@ extension SearchResultViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
             if viewModel.items.count == indexPath.row + 2 {
-                viewModel.pageNum += 1
+                self.page += 1
                 bindSearchItems()
-                viewModel.showItems()
+                viewModel.showItems(page: page
+                )
             }
             collectionView.reloadData()
         }

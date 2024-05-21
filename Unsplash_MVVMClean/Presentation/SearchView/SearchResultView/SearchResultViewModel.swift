@@ -15,15 +15,15 @@ final class SearchResultViewModel {
         }
     }
     
-    var searchHandler: (([Searchable]) -> Void)?
-    var searchTypeHandler: ((SearchType) -> Void)?
-    var searchText: String = ""
+    private var searchHandler: (([Searchable]) -> Void)?
+    private var searchTypeHandler: ((SearchType) -> Void)?
+    private var searchText: String = ""
     var pageNum: Int = 0
-    var searchLastPageNum = 0
+    private var searchLastPageNum = 0
     var currentSearchType: SearchType = .photos {
         didSet {
             verifySearch()
-            prepareSearch()
+//            prepareSearch()
             searchHandler?(items)
             searchTypeHandler?(currentSearchType)
         }
@@ -50,20 +50,20 @@ final class SearchResultViewModel {
         self.searchTypeHandler = closure
     }
     
-    func showItems() {
+    func showItems(page: Int) {
         switch currentSearchType {
         case .photos:
-            self.showPhotoList()
+            self.showPhotoList(page: page)
         case .collections:
-            self.showCollectionList()
+            self.showCollectionList(page: page)
         case .users:
-            self.showUserList()
+            self.showUserList(page: page)
         }
     }
     
-    var task: URLSessionTask?
-    func showPhotoList() {
-        task = photoSearchUseCase.fetchSearchPhotos(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: pageNum) { result in
+    private var task: URLSessionTask?
+    func showPhotoList(page: Int) {
+        task = photoSearchUseCase.fetchSearchPhotos(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: page) { result in
             switch result {
             case .success(let data):
                 self.items.append(contentsOf: data.results)
@@ -73,8 +73,8 @@ final class SearchResultViewModel {
         }
     }
     
-    func showCollectionList() {
-        task = collectionSearchUseCase.fetchSearchCollections(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: pageNum) { result in
+    private func showCollectionList(page: Int) {
+        task = collectionSearchUseCase.fetchSearchCollections(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: page) { result in
             switch result {
             case .success(let data):
                 self.items.append(contentsOf: data.results)
@@ -84,8 +84,8 @@ final class SearchResultViewModel {
         }
     }
     
-    func showUserList() {
-        task = userSearchUseCase.fetchSearchUsers(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: pageNum) { result in
+    func showUserList(page: Int) {
+        task = userSearchUseCase.fetchSearchUsers(searchText: searchText, searchType: currentSearchType.rawValue, pageNum: page) { result in
             switch result {
             case .success(let data):
                 self.items.append(contentsOf: data.results)
@@ -99,7 +99,7 @@ final class SearchResultViewModel {
         items = []
     }
     
-    func initialSearchState() {
+    private func initialSearchState() {
         task?.cancel()
         isSearchFetching = false
         pageNum = 0
@@ -116,7 +116,7 @@ final class SearchResultViewModel {
         initialSearchState()
     }
     
-    func prepareSearch() {
+    func prepareSearch(page: Int) {
         if pageNum == searchLastPageNum {
             return
         }
@@ -124,6 +124,6 @@ final class SearchResultViewModel {
             return
         }
         isSearchFetching = true
-        self.showItems()
+        self.showItems(page: page)
     }
 }

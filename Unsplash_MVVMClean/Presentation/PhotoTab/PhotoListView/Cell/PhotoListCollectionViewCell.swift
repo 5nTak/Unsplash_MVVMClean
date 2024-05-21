@@ -9,8 +9,6 @@ import UIKit
 import SnapKit
 
 final class PhotoListCollectionViewCell: UICollectionViewCell {
-    var viewModel = PhotoListViewModel()
-    
     private var photoImageView: DownloadbleImageView = {
         let imageView = DownloadbleImageView(frame: .zero)
         imageView.backgroundColor = .gray
@@ -23,9 +21,6 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .white
-        label.shadowColor = .black
-        label.layer.shadowOpacity = 0.8
-        label.layer.shadowRadius = 10
         
         return label
     }()

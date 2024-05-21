@@ -37,8 +37,6 @@ final class SearchViewModel {
     private var discoverUseCase: PhotoUseCase
     
     var contentsHandler: (([SearchSectionItem]) -> Void)?
-    
-    var discoverPageNum = 0
     var isFetching = false
     
     private let searchResultViewModel = SearchResultViewModel()
@@ -53,12 +51,12 @@ final class SearchViewModel {
         self.contentsHandler = closure
     }
     
-    func showContents() {
+    func showContents(page: Int) {
         fetchCategory()
-        fetchDiscover()
+        fetchDiscover(page: page)
     }
     
-    func fetchCategory() {
+    private func fetchCategory() {
         categoryUseCase.fetchCategories { result in
             switch result {
             case .success(let data):
@@ -69,13 +67,13 @@ final class SearchViewModel {
         }
     }
     
-    func fetchDiscover() {
+    private func fetchDiscover(page: Int) {
         if isFetching {
             return
         }
         isFetching = true
         
-        discoverUseCase.fetchPhotos(pageNum: discoverPageNum) { result in
+        discoverUseCase.fetchPhotos(pageNum: page) { result in
             switch result {
             case .success(let data):
                 self.discoverItems.append(contentsOf: data)
@@ -93,9 +91,9 @@ final class SearchViewModel {
         searchResultViewModel.resetResult()
     }
     
-    func executeSearch(searchText: String) {
+    func executeSearch(searchText: String, page: Int) {
         searchResultViewModel.verifySearch(searchText: searchText)
-        searchResultViewModel.prepareSearch()
+        searchResultViewModel.prepareSearch(page: page)
     }
     
     func changeSearchType(searchType: SearchType) {

@@ -12,6 +12,7 @@ final class SearchViewController: UIViewController {
     private var viewModel = SearchViewModel()
     private var searchViewDataSource = SearchViewCollectionViewDataSource()
     private var delegate: DetailViewDelegate?
+    private var page: Int = 1
     
     private var isShowScopeBar = false {
         willSet {
@@ -58,7 +59,7 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         bind()
         setupCollectionView()
-        viewModel.showContents()
+        viewModel.showContents(page: page)
         setupNavigationBar()
     }
     
@@ -102,7 +103,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchBarText = searchBar.text, !searchBarText.isEmpty {
             isShowScopeBar = true
-            viewModel.executeSearch(searchText: searchBarText)
+            viewModel.executeSearch(searchText: searchBarText, page: page)
         }
     }
     

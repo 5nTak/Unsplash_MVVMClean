@@ -17,12 +17,13 @@ final class PhotoListViewController: UIViewController {
     private var photoListViewDataSource = PhotoListCollectionViewDataSource()
     private var dataSource: UICollectionViewDiffableDataSource<Section, Photo>?
     private var delegate: DetailViewDelegate?
+    private var page: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
         setupCollectionView()
-        viewModel.showPhotos()
+        viewModel.showPhotos(page: self.page)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -126,23 +127,15 @@ extension PhotoListViewController: UICollectionViewDelegate {
         detailVC.listView = collectionView
         self.present(detailVC, animated: true)
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        guard collectionView.frame.size.height > 0 else { return }
-        if offsetY + collectionView.frame.size.height >= collectionView.contentSize.height - 200 {
-            viewModel.showPhotos()
-        }
-    }
 }
 
 extension PhotoListViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            if viewModel.photos.count == indexPath.row + 6 {
-                viewModel.pageNum += 1
-                viewModel.showPhotos()
+            if viewModel.photos.count == indexPath.row + 4 {
+                self.page += 1
                 bind()
+                viewModel.showPhotos(page: self.page)
             }
         }
     }
