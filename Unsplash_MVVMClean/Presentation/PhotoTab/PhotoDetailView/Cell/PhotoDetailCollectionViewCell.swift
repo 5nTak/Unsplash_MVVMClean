@@ -24,7 +24,7 @@ final class PhotoDetailCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupLayout() {
-        self.addSubview(imageView)
+        contentView.addSubview(imageView)
         
         guard let photo = photo else {
             return
@@ -54,5 +54,10 @@ final class PhotoDetailCollectionViewCell: UICollectionViewCell {
         imageView.isCancel = true
         imageView.image = nil
         imageView.cancelLoadingImage()
+    }
+    
+    private func setupNextImageView() {
+        imageView.next
+        imageView.setupLongPressGesture()
     }
 }

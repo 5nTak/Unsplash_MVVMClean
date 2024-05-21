@@ -48,7 +48,7 @@ final class SearchCategoryCollectionViewCell: UICollectionViewCell {
             imageView,
             titleLabel
         ].forEach {
-            addSubview($0)
+            contentView.addSubview($0)
         }
         
         imageView.snp.makeConstraints {

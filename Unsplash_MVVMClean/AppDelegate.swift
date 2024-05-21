@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().backgroundColor = UIColor.darkGray
         }
         
+        requestPhotoLibraryAccess()
+        
         return true
+    }
+    
+    // MARK: 사진 접근 권한 요청
+    func requestPhotoLibraryAccess() {
+        PHPhotoLibrary.requestAuthorization { status in
+            if status == .authorized {
+                print("사진 접근 권한 허용")
+            } else {
+                print("사진 접근 권한 거부")
+            }
+        }
     }
 
     // MARK: UISceneSession Lifecycle

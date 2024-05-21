@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Photos
 
 final class DownloadbleImageView: UIImageView {
     
@@ -16,8 +17,10 @@ final class DownloadbleImageView: UIImageView {
     
     private var isFail: Bool = false {
         willSet {
-            failMessage.isHidden = !newValue
-            loadingView.stopAnimating()
+            DispatchQueue.main.async {
+                self.failMessage.isHidden = !newValue
+                self.loadingView.stopAnimating()
+            }
         }
     }
     
@@ -45,6 +48,7 @@ final class DownloadbleImageView: UIImageView {
         super.init(frame: frame)
         
         setupLayout()
+        setupLongPressGesture()
     }
     
     required init?(coder: NSCoder) {
@@ -113,5 +117,48 @@ final class DownloadbleImageView: UIImageView {
         dataTask?.cancel()
         dataTask = nil
     }
+    
+    // MARK: Long Press Gesture
+    func setupLongPressGesture() {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        self.addGestureRecognizer(longPressGesture)
+        self.isUserInteractionEnabled = true
+    }
+    
+    @objc private func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let downloadAction = UIAlertAction(title: "Download".localized, style: .default) { _ in
+                if let image = self.image {
+                    self.saveImageToPhotoLibrary(image: image)
+                }
+            }
+            let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel, handler: nil)
+            alertController.addAction(downloadAction)
+            alertController.addAction(cancelAction)
+            
+            if let viewController = self.parentViewController {
+                viewController.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    private func saveImageToPhotoLibrary(image: UIImage) {
+        PHPhotoLibrary.shared().performChanges {
+            PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }
+    }
 }
 
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while let responder = parentResponder {
+            if let viewController = responder as? UIViewController {
+                return viewController
+            }
+            parentResponder = responder.next
+        }
+        return nil
+    }
+}

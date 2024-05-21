@@ -65,7 +65,7 @@ final class SearchUserCell: UICollectionViewCell {
             userNameLabel,
             underLineView
         ].forEach {
-            addSubview($0)
+            contentView.addSubview($0)
         }
         
         imageView.snp.makeConstraints {
