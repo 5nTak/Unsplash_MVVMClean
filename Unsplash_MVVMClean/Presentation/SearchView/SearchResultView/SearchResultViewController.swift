@@ -9,8 +9,8 @@ import UIKit
 import SnapKit
 
 final class SearchResultViewController: UIViewController {
-    var viewModel: SearchResultViewModel
-    var currentSearchType: SearchType = .photos {
+    private var viewModel: SearchResultViewModel
+    private var currentSearchType: SearchType = .photos {
         didSet {
             collectionView.setContentOffset(.zero, animated: false)
         }

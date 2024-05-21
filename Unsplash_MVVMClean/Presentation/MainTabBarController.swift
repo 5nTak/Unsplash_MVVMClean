@@ -19,29 +19,29 @@ final class MainTabBarController: UITabBarController {
     private func setupTabBarItem() {
         let photoListViewController = PhotoListViewController()
         photoListViewController.tabBarItem = UITabBarItem(
-            title: "Photo",
+            title: "Photo".localized,
             image: UIImage(systemName: "photo"),
             selectedImage: UIImage(systemName: "photo.fill")
         )
         
-        let loginViewController = LoginNavigationController(rootViewController: LoginViewController())
-        loginViewController.tabBarItem = UITabBarItem(
-            title: "Login",
-            image: UIImage(systemName: "person.crop.circle"),
-            selectedImage: UIImage(systemName: "person.crop.circle.fill")
-        )
-        
         let searchViewController = SearchNavigationController(rootViewController: SearchViewController())
         searchViewController.tabBarItem = UITabBarItem(
-            title: "Search",
+            title: "Search".localized,
             image: UIImage(systemName: "magnifyingglass"),
             selectedImage: UIImage(systemName: "magnifyingglass")
         )
         
+        let loginViewController = LoginNavigationController(rootViewController: LoginViewController())
+        loginViewController.tabBarItem = UITabBarItem(
+            title: "Login".localized,
+            image: UIImage(systemName: "person.crop.circle"),
+            selectedImage: UIImage(systemName: "person.crop.circle.fill")
+        )
+        
         viewControllers = [
             photoListViewController,
-            loginViewController,
-            searchViewController
+            searchViewController,
+            loginViewController
         ]
     }
     

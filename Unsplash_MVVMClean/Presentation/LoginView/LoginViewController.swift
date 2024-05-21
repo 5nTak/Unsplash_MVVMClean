@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
         textField.tintColor = .white
         textField.textColor = .white
         textField.keyboardType = .emailAddress
-        textField.setupPlaceholder(placeholder: "Email", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "Email".localized, color: .lightGray)
         
         return textField
     }()
@@ -26,7 +26,7 @@ final class LoginViewController: UIViewController {
         textField.tintColor = .white
         textField.textColor = .white
         textField.isSecureTextEntry = true
-        textField.setupPlaceholder(placeholder: "Password", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "Password".localized, color: .lightGray)
         
         return textField
     }()
@@ -103,7 +103,7 @@ final class LoginViewController: UIViewController {
     }
     
     private func setupNavigatonBar() {
-        navigationItem.title = "Login"
+        navigationItem.title = "Login".localized
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }

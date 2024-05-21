@@ -15,14 +15,14 @@ final class ResetPasswordViewController: UIViewController {
         textField.tintColor = .white
         textField.textColor = .white
         textField.keyboardType = .emailAddress
-        textField.setupPlaceholder(placeholder: "Email", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "Email".localized, color: .lightGray)
         
         return textField
     }()
     
     private lazy var findButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Reset", for: .normal)
+        button.setTitle("Reset".localized, for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 8
@@ -41,7 +41,7 @@ final class ResetPasswordViewController: UIViewController {
     @objc private func resetPassword() {
         view.endEditing(true)
         
-        let title = "reset".localized
+        let title = "reset_title".localized
         var message = "reset_message".localized
         
         if inputEmailTextField.text?.isEmpty ?? true {
@@ -56,7 +56,7 @@ final class ResetPasswordViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationItem.title = "Reset Password"
+        navigationItem.title = "Reset Password".localized
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }

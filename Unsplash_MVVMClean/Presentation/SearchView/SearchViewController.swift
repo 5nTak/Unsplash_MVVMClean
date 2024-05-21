@@ -25,14 +25,14 @@ final class SearchViewController: UIViewController {
         definesPresentationContext = true
         
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search Photos, Collections, Users"
+        searchController.searchBar.placeholder = "Search Photos, Collections, Users".localized
         searchController.searchBar.tintColor = .white
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
             .defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         searchController.searchBar.showsScopeBar = false
-        searchController.searchBar.scopeButtonTitles = ["Photos", "Colletions", "Users"]
+        searchController.searchBar.scopeButtonTitles = ["Photos".localized, "Colletions".localized, "Users".localized]
         
         let selectedTitleTextColor = [NSAttributedString.Key.foregroundColor: UIColor.black]
         UISegmentedControl.appearance().setTitleTextAttributes(selectedTitleTextColor, for: .selected)

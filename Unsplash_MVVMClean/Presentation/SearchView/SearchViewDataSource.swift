@@ -58,10 +58,10 @@ final class SearchViewCollectionViewDataSource: NSObject, UICollectionViewDataSo
             
             switch contents[indexPath.section].type {
             case .category:
-                headerView.setTitle(title: "Browse by Category")
+                headerView.setTitle(title: "Browse by Category".localized)
             
             case .discover:
-                headerView.setTitle(title: "Discover")
+                headerView.setTitle(title: "Discover".localized)
             }
             
             return headerView

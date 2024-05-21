@@ -14,7 +14,7 @@ final class JoinViewController: UIViewController {
         textField.borderStyle = .none
         textField.tintColor = .white
         textField.textColor = .white
-        textField.setupPlaceholder(placeholder: "First Name", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "First Name".localized, color: .lightGray)
         
         return textField
     }()
@@ -24,7 +24,7 @@ final class JoinViewController: UIViewController {
         textField.borderStyle = .none
         textField.tintColor = .white
         textField.textColor = .white
-        textField.setupPlaceholder(placeholder: "Last Name", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "Last Name".localized, color: .lightGray)
         
         return textField
     }()
@@ -34,7 +34,7 @@ final class JoinViewController: UIViewController {
         textField.borderStyle = .none
         textField.tintColor = .white
         textField.textColor = .white
-        textField.setupPlaceholder(placeholder: "User Name", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "User Name".localized, color: .lightGray)
         
         return textField
     }()
@@ -45,7 +45,7 @@ final class JoinViewController: UIViewController {
         textField.tintColor = .white
         textField.textColor = .white
         textField.keyboardType = .emailAddress
-        textField.setupPlaceholder(placeholder: "Email", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "Email".localized, color: .lightGray)
         
         return textField
     }()
@@ -56,7 +56,7 @@ final class JoinViewController: UIViewController {
         textField.tintColor = .white
         textField.textColor = .white
         textField.isSecureTextEntry = true
-        textField.setupPlaceholder(placeholder: "Password", color: .lightGray)
+        textField.setupPlaceholder(placeholder: "Password".localized, color: .lightGray)
         
         return textField
     }()
@@ -65,7 +65,7 @@ final class JoinViewController: UIViewController {
         let button = UIButton()
         button.setTitleColor(.black, for: .normal)
         button.setTitleColor(.lightGray, for: .highlighted)
-        button.setTitle("Sign Up", for: .normal)
+        button.setTitle("Sign Up".localized, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(trySignUp), for: .touchUpInside)
@@ -127,7 +127,7 @@ final class JoinViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationItem.title = "Join Unsplash"
+        navigationItem.title = "Join Unsplash".localized
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }

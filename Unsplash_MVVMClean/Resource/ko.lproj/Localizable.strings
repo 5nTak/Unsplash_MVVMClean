@@ -29,3 +29,31 @@
 "join_title" = "가입 시, 약관 및 개인정보 정책에 동의하는것으로 간주합니다.";
 "join_result" = "가입 결과";
 "join_success" = "환영합니다! 가입에 성공했습니다.";
+
+"Download" = "이미지 다운로드";
+"Cancel" = "취소";
+
+"Photo" = "사진 보기";
+"Login" = "로그인";
+"Search" = "검색";
+
+"Photos" = "사진";
+"Collections" = "콜렉션";
+"Users" = "작가";
+
+"Email" = "이메일";
+"Password" = "비밀번호";
+
+"Search Photos, Collections, Users" = "사진, 콜렉션, 작가를 검색하세요";
+
+"Browse by Category" = "카테고리";
+"Discover" = "둘러보기";
+
+"First Name" = "이름";
+"Last Name" = "성";
+"User Name" = "닉네임";
+"Sign Up" = "가입하기";
+"Join Unsplash" = "가입";
+
+"Reset" = "초기화";
+"Reset Password" = "비밀번호 초기화";

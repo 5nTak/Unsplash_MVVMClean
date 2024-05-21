@@ -10,8 +10,7 @@
 "unsplash_share_title" = "UnSplash Share";
 "ok" = "OK";
 "error" = "Error";
-"error_network_message" = "
-There is a network problem.\nPlease try again later.";
+"error_network_message" = "There is a network problem.\nPlease try again later.";
 "error_json_parsing" = "Data conversion failed.\nPlease try again later.";
 "error_data" = "There is a data problem.\nPlease contact the person in charge.";
 "error_etc" = "An unknown error has occurred.\nPlease try again later.";
@@ -24,9 +23,37 @@ There is a network problem.\nPlease try again later.";
 "login_result" = "Login result";
 "login_result_message" = "Login success.";
 
-"reset" = "Reset result";
+"reset_title" = "Reset result";
 "reset_message" = "The reset password has been sent to your email address. Try logging in.";
 
 "join_title" = "By joining, you agree to the Terms and Privacy Policy.";
 "join_result" = "Join result";
 "join_success" = "Join success. welcome!";
+
+"Download" = "Download";
+"Cancel" = "Cancel";
+
+"Photo" = "Photo";
+"Login" = "Login";
+"Search" = "Search";
+
+"Photos" = "Photos";
+"Collections" = "Collections";
+"Users" = "Users";
+
+"Email" = "Email";
+"Password" = "Password";
+
+"Search Photos, Collections, Users" = "Search Photos, Collections, Users";
+
+"Browse by Category" = "Browse by Category";
+"Discover" = "Discover";
+
+"First Name" = "First Name";
+"Last Name" = "Last Name";
+"User Name" = "User Name";
+"Sign Up" = "Sign Up";'
+"Join Unsplash" = "Join Unsplash";
+
+"Reset" = "Reset";
+"Reset Password" = "Reset Password";
