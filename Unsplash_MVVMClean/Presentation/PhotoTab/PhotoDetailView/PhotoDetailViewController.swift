@@ -181,11 +181,9 @@ final class PhotoDetailViewController: UIViewController {
     }
     
     private func setupGesture() {
-        // fullScreen toggle 제스처 등록
         let fullscreenGesture = UITapGestureRecognizer(target: self, action: #selector(toggleFullScreen))
         self.view.addGestureRecognizer(fullscreenGesture)
         
-        // pullDown 제스처 등록
         let pullDownGesture = UIPanGestureRecognizer(target: self, action: #selector(pullDownDismissGesture(sender:)))
         self.view.addGestureRecognizer(pullDownGesture)
     }
@@ -288,8 +286,4 @@ extension PhotoDetailViewController: DetailViewDelegate {
         let indexPath = IndexPath(row: currentItemRow, section: sectionIndex)
         listView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     }
-}
-
-protocol DetailViewDelegate {
-    func didDismissDetailView(sectionIndex: Int)
 }
